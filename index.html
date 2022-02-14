@@ -1,29 +1,86 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>monique's class homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --red: #ff5e36;
+        --yellow: #fdae10;
+        --green: #7abb03;
+        --blue: #5cb0ff;
+        --brown: #331501;
+        --tan: #fff9e6;
+      }
+      body {
+        font-family: 'Roboto Mono', monospace;
+        text-align: right;
+        color: var(--brown);
+        background: var(--tan);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        color: white;
+        background: var(--brown);
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 98vh;
+        overflow-x: scroll;
+      }
+      .box {
+        display: flex;
+        flex-direction: column;
+        position:absolute; bottom:0;
+        width: 20%;
+        padding: 0 2%;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" style="background: var(--red)">
+        <h1>monique legaspi</h1>
+      </div>
+      
+      <div class="box" style="background: var(--yellow); left: 25.33%">
+        <h2>exercises</h2>
+        <a href="exercises/webring.html">webring</a>
+      </div>
+      
+      <div class="box" style="background: var(--green); left: 50.66%">
+        <h2>journal</h2>
+        <a href="journal/2-1.html">1 feb 2022</a><br/>
+        <a href="journal/2-8.html">8 feb 2022</a>
+      </div>
+      
+      <div class="box" style="background: var(--blue); left: 76%">
+        <h2>assignments</h2>
+        <a href="assignments/p1/01.html">25 variations</a>
+      </div>
+    </div>
+    
+  </body>
+  <script>
+    const BOXES = document.getElementsByClassName("box");
+    const LO = 50;
+    const HI = 100;
+    console.log(BOXES);
 
-<head>
-  <title>Monique's class homepage</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-</head>
-
-<body>
-
-  <h1>Monique's class homepage</h1>
-
-  <p>
-    Welcome!
-  </p>
-  <h2>Exercises</h2>
-  <a href="exercises/webring.html">Exercise 1. Webring</a>
-  <h2>Journal</h2>
-  <a href="journal/2-1.html">Journal 1. 2/1/22</a><br/>
-  <a href="journal/2-8.html">Journal 2. 2/8/22</a>
-  <h2>Assignments</h2>
-  <a href="assignments/p1/01.html">Assignment 1. 25 Variations</a>
-  
-</body>
-
+    for (var i = 0; i < BOXES.length; i++) {
+      let mt = (Math.random() * (HI - LO) + LO).toString() + "%";
+      BOXES[i].style.height = mt;
+    }
+  </script>
 </html>
