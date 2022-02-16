@@ -17,11 +17,13 @@
                 font-family: 'Noto Serif', serif;
                 text-align: center;
                 color: var(--greentext);
+                overflow-y: hidden;
+                overflow-x: hidden;
             }
             h1 {
-                margin-top: 120px;
+                padding-top: 120px;
             }
-            #orb {
+            .orb {
                 position: absolute;
                 top: 50px;
                 left: calc(50% - 2.5vh);
@@ -46,40 +48,83 @@
                     box-shadow: 0 0 40vh 40vh red;
                 }
             }
-            #nav h2 {
+            .nav h2 {
                 display: inline-block;
                 margin: 0 20px;
             }
             a {
+                color: inherit;
+            }
+            a:hover {
+                cursor: pointer;
+                background: var(--greentext);
+                color: white;
+            }
+            a.selected {
+                background: var(--greentext);
+                color: white;
+            }
 
+            .page {
+                width: 100vw;
+                height: 100vh;
             }
         </style>
     </head>
     <body>
-        <div id="orb"></div>
-        <h1><em>Café Mam</em></h1>
-        <div id="nav">
-            <h2><em><a>Menu</a></em></h2>
-            <h2><em><a>Location</a></em></h2>
-            <h2><em><a>Hours</a></em></h2>
+        
+        
+        <div class="page" id="menu">
+            <div class="orb" style="top: calc(100vh + 75px)"></div>
+            <h1><em>Café Mam</em></h1>
+            <div class="nav">
+                <h2><em><a class="selected" href="#menu">Menu</a></em></h2>
+                <h2><em><a href="#location">Location</a></em></h2>
+                <h2><em><a href="#hours">Hours</a></em></h2>
+            </div>
+            <div style="margin-top: 50px; overflow-y: scroll;">
+                <em>
+                    Iced/Hot Matcha Latte<br/>4<br/><br/>
+                    Honey Matcha Latte<br/>4.5<br/><br/>
+                    Ceremonial Matcha Shot<br/>2<br/><br/>
+                    Rose Latte<br/>4.5<br/><br/>
+                    Thai Tea Latte<br/>4.5<br/><br/>
+                    Assorted Loose Leaf Teas<br/>3<br/><br/>
+                    **<br/><br/>
+                    Glazed Earl Grey Scones<br/>4
+                </em>
+            </div>
         </div>
-        <div id="menu" style="margin-top: 50px; ">
-            <em>
-                Iced/Hot Matcha Latte - 4<br/>
-                Honey Matcha Latte - 4.5<br/>
-                Ceremonial Matcha Shot - 2<br/>
-                Rose Latte - 4.5<br/>
-                Thai Tea Latte - 4.5<br/>
-                Assorted Loose Leaf Teas - 3<br/>
-                **<br/>
-                Glazed Earl Grey Scones - 4
-            </em>
-        </div>
-        <div id="location">
 
+        <div class="page" id="location">
+            <div class="orb" style="top: calc(200vh + 100px)"></div>
+            <h1><em>Café Mam</em></h1>
+            <div class="nav">
+                <h2><em><a href="#menu">Menu</a></em></h2>
+                <h2><em><a class="selected" href="#location">Location</a></em></h2>
+                <h2><em><a href="#hours">Hours</a></em></h2>
+            </div>
+            <div style="margin-top: 50px; overflow-y: scroll;">
+                <em>
+                    Front Window at 41 Spring St, PRINCETON, NJ<br/><br/>
+                    <a href="https://www.instagram.com/cafemam_/">Instagram</a>
+                </em>
+            </div>
         </div>
-        <div id="hours">
 
+        <div class="page" id="hours">
+            <div class="orb"></div>
+            <h1><em>Café Mam</em></h1>
+            <div class="nav">
+                <h2><em><a href="#menu">Menu</a></em></h2>
+                <h2><em><a href="#location">Location</a></em></h2>
+                <h2><em><a class="selected" href="#hours">Hours</a></em></h2>
+            </div>
+            <div style="margin-top: 50px; overflow-y: scroll;">
+                <em>
+                    **Open TUE 2/15 from 10a – 12p**
+                </em>
+            </div>
         </div>
     </body>
 </html>
