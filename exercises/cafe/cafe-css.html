@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>café mam - html ver</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        <style>
+            /* colors */
+            :root {
+                --greentext: #0b6203;
+            }
+            body {
+                font-family: 'Noto Serif', serif;
+                text-align: center;
+                color: var(--greentext);
+            }
+            h1 {
+                margin-top: 120px;
+            }
+            #orb {
+                position: absolute;
+                top: 50px;
+                left: calc(50% - 2.5vh);
+                height: 5vh;
+                width: 5vh;
+                border-radius: 1000px;
+                background: greenyellow;
+                opacity: 0.7;
+                margin: 40vh auto;
+                box-shadow: 0 0 40vh 40vh greenyellow;
+                animation: pulse 5s infinite alternate;
+                z-index: -1;
+            }
+            @keyframes pulse {
+                0% {
+                    background: greenyellow;
+                    box-shadow: 0 0 40vh 40vh greenyellow;
+                }
+
+                100% {
+                    background: red;
+                    box-shadow: 0 0 40vh 40vh red;
+                }
+            }
+            #nav h2 {
+                display: inline-block;
+                margin: 0 20px;
+            }
+            a {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="orb"></div>
+        <h1><em>Café Mam</em></h1>
+        <div id="nav">
+            <h2><em><a>Menu</a></em></h2>
+            <h2><em><a>Location</a></em></h2>
+            <h2><em><a>Hours</a></em></h2>
+        </div>
+        <div id="menu" style="margin-top: 50px; ">
+            <em>
+                Iced/Hot Matcha Latte - 4<br/>
+                Honey Matcha Latte - 4.5<br/>
+                Ceremonial Matcha Shot - 2<br/>
+                Rose Latte - 4.5<br/>
+                Thai Tea Latte - 4.5<br/>
+                Assorted Loose Leaf Teas - 3<br/>
+                **<br/>
+                Glazed Earl Grey Scones - 4
+            </em>
+        </div>
+        <div id="location">
+
+        </div>
+        <div id="hours">
+
+        </div>
+    </body>
+</html>
