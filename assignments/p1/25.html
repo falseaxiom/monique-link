@@ -58,6 +58,7 @@
             }
 
             .text {
+                opacity: 0;
                 color: var(--brown);
                 position: absolute;
                 top: calc(50vh - 1.5rem);
@@ -66,69 +67,93 @@
                 height: 5rem;
                 overflow-y: scroll;
             }
+
+            #p1 {opacity: 100%;animation: p1 80s infinite normal;animation-delay: 2s;}
+            #p2 {animation: p2 80s infinite normal;animation-delay: 2s;}
+            #p3 {animation: p3 80s infinite normal;animation-delay: 2s;}
+            #p4 {animation: p4 80s infinite normal;animation-delay: 2s;}
+            #p5 {animation: p5 80s infinite normal;animation-delay: 2s;}
+            #p6 {animation: p6 80s infinite normal;animation-delay: 2s;}
+            #p7 {animation: p7 80s infinite normal;animation-delay: 2s;}
+            #p8 {animation: p8 80s infinite normal;animation-delay: 2s;}
+            #p9 {animation: p9 80s infinite normal;animation-delay: 2s;}
+            #p10 {animation: p10 80s infinite normal;animation-delay: 2s;}
+            #p11 {animation: p11 80s infinite normal;animation-delay: 2s;}
+            #p12 {animation: p12 80s infinite normal;animation-delay: 2s;}
+
+            @keyframes p1 { 0%{opacity: 100%} 8.3%{opacity: 0} 91.7%{opacity: 0} }
+            @keyframes p2 { 0%{opacity: 0} 8.3%{opacity: 100%} 16.7%{opacity: 0} }
+            @keyframes p3 { 8.3%{opacity: 0} 16.7%{opacity: 100%} 25%{opacity: 0} }
+            @keyframes p4 { 16.7%{opacity: 0} 25%{opacity: 100%} 33.3%{opacity: 0} }
+            @keyframes p5 { 25%{opacity: 0} 33.3%{opacity: 100%} 41.7%{opacity: 0} }
+            @keyframes p6 { 33.3%{opacity: 0} 41.7%{opacity: 100%} 50%{opacity: 0} }
+            @keyframes p7 { 41.7%{opacity: 0} 50%{opacity: 100%} 58.3%{opacity: 0} }
+            @keyframes p8 { 50%{opacity: 0} 58.3%{opacity: 100%} 66.7%{opacity: 0} }
+            @keyframes p9 { 58.3%{opacity: 0} 66.7%{opacity: 100%} 75%{opacity: 0} }
+            @keyframes p10 { 66.7%{opacity: 0} 75%{opacity: 100%} 83.3%{opacity: 0} }
+            @keyframes p11 { 75%{opacity: 0} 83.3%{opacity: 100%} 91.7%{opacity: 0} }
+            @keyframes p12 { 83.3%{opacity: 0} 91.7%{opacity: 100%} 100%{opacity: 0} }
         </style>
     </head>
     <body>
         <div class="orb"></div>
-        <div class="text">
-            <p>
-                Seventeen minutes ago, I was in love<br/>
-                with the cashier and a cinnamon pull-apart,<br/>
-                seven minutes before that, it was a gray-
-            </p>
-            <p>
-                haired man in argyle socks, a woman<br/>
-                dancing outside the bakery holding<br/>
-                a cigarette and broken umbrella. The rain,
-            </p>
-            <p>
-                I've fallen in love with it many times,<br/>
-                the fog, the frost—how it covers the clovers<br/>
-                —and by clovers I mean lovers.
-            </p>
-            <p>
-                And now I'm thinking how much I want to rush up<br/>
-                to the stranger in the plaid wool hat<br/>
-                and tell him how much I love his eyes,
-            </p>
-            <p>
-                all those fireworks, every seventeen minutes, exploding<br/>
-                in my head—you the baker, you the novelist,<br/>
-                you the reader, you the homeless man on the corner
-            </p>
-            <p>
-                with the strong hands—I've thought about you. But<br/>
-                in this world we've been taught to keep<br/>
-                our emotions tight, a rubberband ball we worry
-            </p>
-            <p>
-                if one band loosens, the others will begin shooting off<br/>
-                in so many directions. So we quiet.<br/>
-                I quiet. I eat my cinnamon bread
-            </p>
-            <p>
-                in the bakery watching the old man still sitting<br/>
-                at his table, moving his napkin as he drinks<br/>
-                his small cup of coffee, and I never say,
-            </p>
-            <p>
-                <em>I think you're beautiful,</em> except in my head,<br/>
-                except I decide I can't<br/>
-                live this way, and walk over to him and
-            </p>
-            <p>
-                place my hand on his shoulder, lean in close<br/>
-                and whisper, <em>I love your argyle socks,</em><br/>
-                and he grabs my hand,
-            </p>
-            <p>
-                the way a memory holds tight in the smallest<br/>
-                corner. He smiles and says,<br/>
-                <em>I always hope someone will notice.</em>
-            </p>
-            <p>
-                — Kelli Russell Agodon, Love Waltz with Fireworks”
-            </p>
+        <div class="text" id="p1">
+            Seventeen minutes ago, I was in love<br/>
+            with the cashier and a cinnamon pull-apart,<br/>
+            seven minutes before that, it was a gray-
+        </div>
+        <div class="text" id="p2">
+            haired man in argyle socks, a woman<br/>
+            dancing outside the bakery holding<br/>
+            a cigarette and broken umbrella. The rain,
+        </div>
+        <div class="text" id="p3">
+            I've fallen in love with it many times,<br/>
+            the fog, the frost—how it covers the clovers<br/>
+            —and by clovers I mean lovers.
+        </div>
+        <div class="text" id="p4">
+            And now I'm thinking how much I want to rush up<br/>
+            to the stranger in the plaid wool hat<br/>
+            and tell him how much I love his eyes,
+        </div>
+        <div class="text" id="p5">
+            all those fireworks, every seventeen minutes, exploding<br/>
+            in my head—you the baker, you the novelist,<br/>
+            you the reader, you the homeless man on the corner
+        </div>
+        <div class="text" id="p6">
+            with the strong hands—I've thought about you. But<br/>
+            in this world we've been taught to keep<br/>
+            our emotions tight, a rubberband ball we worry
+        </div>
+        <div class="text" id="p7">
+            if one band loosens, the others will begin shooting off<br/>
+            in so many directions. So we quiet.<br/>
+            I quiet. I eat my cinnamon bread
+        </div>
+        <div class="text" id="p8">
+            in the bakery watching the old man still sitting<br/>
+            at his table, moving his napkin as he drinks<br/>
+            his small cup of coffee, and I never say,
+        </div>
+        <div class="text" id="p9">
+            <em>I think you're beautiful,</em> except in my head,<br/>
+            except I decide I can't<br/>
+            live this way, and walk over to him and
+        </div>
+        <div class="text" id="p10">
+            place my hand on his shoulder, lean in close<br/>
+            and whisper, <em>I love your argyle socks,</em><br/>
+            and he grabs my hand,
+        </div>
+        <div class="text" id="p11">
+            the way a memory holds tight in the smallest<br/>
+            corner. He smiles and says,<br/>
+            <em>I always hope someone will notice.</em>
+        </div>
+        <div class="text" id="p12">
+            — Kelli Russell Agodon, Love Waltz with Fireworks”
         </div>
         
         <a href="./24.html">&lt;</a> <a href="./p1.html">back</a> &gt;
