@@ -4,6 +4,7 @@
         <title>p1 - variation 12</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="nav.css">
         <style>
             body {
                 display: block;
@@ -50,6 +51,20 @@
         <p style="margin-left: 3399%">— Kelli Russell Agodon, “Love Waltz with Fireworks”</p>
         <br/>
         
-        <a href="./11.html">&lt;</a> <a href="./p1.html">back</a> <a href="./13.html">&gt;</a>
+        <nav><a href="./11.html">&lt;</a> <a href="./p1.html">back</a> <a href="./13.html">&gt;</a></nav>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./11.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                window.location.href = "./13.html"
+            }
+
+        }
+    </script>
 </html>

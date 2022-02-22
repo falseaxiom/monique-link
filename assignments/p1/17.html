@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav.css">
         <style>
             body {
                 display: block;
@@ -22,8 +23,13 @@
                 height: 70vh;
                 font-size: 8rem;
             }
-            a a {
+            nav a {
                 display: inline;
+                font-size: 1rem;
+                font-weight: 400;
+                padding: 0;
+                width: auto;
+                height: auto;
             }
         </style>
     </head>
@@ -287,6 +293,20 @@
         <a id="257" href="#258">will</a>
         <a id="258" href="#259">notice.</a>
         <a id="259" href="#260">— Kelli Russell Agodon, “Love Waltz with Fireworks”</a>
-        <a id="260"><a href="./16.html">&lt;</a> <a href="./p1.html">back</a> <a href="./18.html">&gt;</a></a>
+        <nav><a href="./16.html">&lt;</a> <a href="./p1.html">back</a> <a href="./18.html">&gt;</a></nav>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./16.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                window.location.href = "./18.html"
+            }
+
+        }
+    </script>
 </html>

@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav.css">
        <style>
             /* colors */
             :root {
@@ -19,6 +20,8 @@
             }
 
             body {background: var(--tan);font-family: 'Noto Serif', serif;}
+
+            nav {background:none}
 
             .orb {
                 position: absolute;
@@ -156,6 +159,20 @@
             — Kelli Russell Agodon, Love Waltz with Fireworks”
         </div>
         
-        <a href="./24.html">&lt;</a> <a href="./p1.html">back</a> &gt;
+        <nav><a href="./24.html">&lt;</a> <a href="./p1.html">back</a> &gt;</nav>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./24.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                console.log('nothing happened.')
+            }
+
+        }
+    </script>
 </html>

@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav.css">
         <style>
             body {
                 font-family: 'Roboto Mono', monospace;
@@ -77,6 +78,20 @@
             </p>
         </div>
         
-        <a href="./17.html">&lt;</a> <a href="./p1.html">back</a> <a href="./19.html">&gt;</a>
+        <nav><a href="./17.html">&lt;</a> <a href="./p1.html">back</a> <a href="./19.html">&gt;</a></nav>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./17.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                window.location.href = "./19.html"
+            }
+
+        }
+    </script>
 </html>

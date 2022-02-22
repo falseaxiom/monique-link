@@ -1,0 +1,22 @@
+:root {
+    --red: #ff5e36;
+    --yellow: #fdae10;
+    --green: #7abb03;
+    --blue: #5cb0ff;
+    --brown: #331501;
+    --tan: #fff9e6;
+}
+nav {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background: white;
+}
+nav a {
+    color: var(--brown);
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--tan);
+    background: var(--brown);
+}

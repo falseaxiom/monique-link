@@ -4,6 +4,7 @@
         <title>p1 - variation 03</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="nav.css">
     </head>
     <body>
         Seventeen<br/>minutes<br/>ago,<br/>I<br/>was<br/>in<br/>love<br/>
@@ -42,6 +43,20 @@
         — Kelli Russell Agodon, “Love Waltz with Fireworks”<br/>
         <br/>
         
-        <a href="./02.html">&lt;</a> <a href="./p1.html">back</a> <a href="./04.html">&gt;</a>
+        <nav><a href="./02.html">&lt;</a> <a href="./p1.html">back</a> <a href="./04.html">&gt;</a></nav>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./02.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                window.location.href = "./04.html"
+            }
+
+        }
+    </script>
 </html>

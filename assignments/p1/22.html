@@ -4,6 +4,7 @@
         <title>p1 - variation 22</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="nav.css">
         <style>
             body {
                 display: flex;
@@ -106,6 +107,20 @@
 
         <div class="tooltip"><span class="tooltiptext"><em>— Kelli Russell Agodon, "Love Waltz with Fireworks”</em></span></div>
 
-        <p><a href="./21.html">&lt;</a> <a href="./p1.html">back</a> <a href="./23.html">&gt;</a></p>
+        <nav><a href="./21.html">&lt;</a> <a href="./p1.html">back</a> <a href="./23.html">&gt;</a></nav>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./21.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                window.location.href = "./23.html"
+            }
+
+        }
+    </script>
 </html>

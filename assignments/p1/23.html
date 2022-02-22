@@ -5,8 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="nav.css">
         <style>
             :root {
                 --blue: #7aa8ff;
@@ -64,6 +65,9 @@
                 width: 100%;
                 text-align: center;
                 margin: 10px 0;
+            }
+            nav {
+                background: none;
             }
         </style>
     </head>
@@ -156,7 +160,21 @@
                     </div>
                 </details>
             </details>
-            <div><a href="./22.html">&lt;</a> <a href="./p1.html">back</a> <a href="./24.html">&gt;</a></div>
+            <nav><a href="./22.html">&lt;</a> <a href="./p1.html">back</a> <a href="./24.html">&gt;</a></nav>
         </div>
     </body>
+    <script>
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+            e = e || window.event;
+            if (e.keyCode == '37') { // left arrow
+                window.location.href = "./22.html"
+            }
+            else if (e.keyCode == '39') { // right arrow
+                window.location.href = "./24.html"
+            }
+
+        }
+    </script>
 </html>
