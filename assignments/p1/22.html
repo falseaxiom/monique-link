@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>p1 - variation 22</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            div {
+                width: 10px;
+                height: 10px;
+                margin: 5px;
+                margin-top: 12px;
+                margin-bottom: 5px;
+                border-radius: 10px;
+                background: pink;
+                box-shadow: 0 0 5px 5px pink;
+                border: none;
+            }
+            /* code below from w3schools */
+            /* Tooltip container */
+            .tooltip {
+                position: relative;
+                display: inline-block;
+            }
+            /* Tooltip text */
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 400px;
+                background-color: pink;
+                color: black;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                margin-left: 10px;
+                
+                /* Position the tooltip text - see examples below! */
+                position: absolute;
+                z-index: 1;
+                top: -10px;
+                left: 105%;
+            }
+            .tooltip .tooltiptext::after {
+                content: " ";
+                position: absolute;
+                top: 50%;
+                right: 100%; /* To the left of the tooltip */
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent pink transparent transparent;
+            }
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tooltip"><span class="tooltiptext">Seventeen minutes ago, I was in love</span></div>
+        <div class="tooltip"><span class="tooltiptext">with the cashier and a cinnamon pull-apart,</span></div>
+        <div class="tooltip"><span class="tooltiptext">seven minutes before that, it was a gray-</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">haired man in argyle socks, a woman</span></div>
+        <div class="tooltip"><span class="tooltiptext">dancing outside the bakery holding</span></div>
+        <div class="tooltip"><span class="tooltiptext">a cigarette and broken umbrella. The rain,</span></div>
+        
+        <div class="tooltip"><span class="tooltiptext">I've fallen in love with it many times,</span></div>
+        <div class="tooltip"><span class="tooltiptext">the fog, the frost—how it covers the clovers</span></div>
+        <div class="tooltip"><span class="tooltiptext">—and by clovers I mean lovers.</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">And now I'm thinking how much I want to rush up</span></div>
+        <div class="tooltip"><span class="tooltiptext">to the stranger in the plaid wool hat</span></div>
+        <div class="tooltip"><span class="tooltiptext">and tell him how much I love his eyes,</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">all those fireworks, every seventeen minutes, exploding</span></div>
+        <div class="tooltip"><span class="tooltiptext">in my head—you the baker, you the novelist,</span></div>
+        <div class="tooltip"><span class="tooltiptext">you the reader, you the homeless man on the corner</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">with the strong hands—I've thought about you. But</span></div>
+        <div class="tooltip"><span class="tooltiptext">in this world we've been taught to keep</span></div>
+        <div class="tooltip"><span class="tooltiptext">our emotions tight, a rubberband ball we worry</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">if one band loosens, the others will begin shooting off</span></div>
+        <div class="tooltip"><span class="tooltiptext">in so many directions. So we quiet.</span></div>
+        <div class="tooltip"><span class="tooltiptext">I quiet. I eat my cinnamon bread</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">in the bakery watching the old man still sitting</span></div>
+        <div class="tooltip"><span class="tooltiptext">at his table, moving his napkin as he drinks</span></div>
+        <div class="tooltip"><span class="tooltiptext">his small cup of coffee, and I never say,</span></div>
+
+        <div class="tooltip"><span class="tooltiptext"><em>I think you're beautiful,</em> except in my head,</span></div>
+        <div class="tooltip"><span class="tooltiptext">except I decide I can't</span></div>
+        <div class="tooltip"><span class="tooltiptext">live this way, and walk over to him and</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">place my hand on his shoulder, lean in close</span></div>
+        <div class="tooltip"><span class="tooltiptext">and whisper, <em>I love your argyle socks,</em></span></div>
+        <div class="tooltip"><span class="tooltiptext">and he grabs my hand,</span></div>
+
+        <div class="tooltip"><span class="tooltiptext">the way a memory holds tight in the smallest</span></div>
+        <div class="tooltip"><span class="tooltiptext">corner. He smiles and says,</span></div>
+        <div class="tooltip"><span class="tooltiptext"><em>I always hope someone will notice.</em></span></div>
+
+        <div class="tooltip"><span class="tooltiptext"><em>— Kelli Russell Agodon, "Love Waltz with Fireworks”</em></span></div>
+
+        <p><a href="./21.html">&lt;</a> <a href="./p1.html">back</a> <a href="./23.html">&gt;</a></p>
+    </body>
+</html>
