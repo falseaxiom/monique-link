@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>p2 - sketch 02</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--   w  ww.  j  a v a  2  s  .c om-->
+        <style id="compiled-css" type="text/css">
+            #info {
+                position: absolute;
+                top: 5vh;
+                left: 7vh;
+                width: 90vh;
+                height: 90vh;
+                border-radius: 1000px;
+                border: 1px solid blue;
+                visibility: hidden;
+                background: white;
+                z-index: 100;
+            }
+            .text {
+                margin-top: 40%;
+                text-align: center;
+            }
+            .circle-wrapper {
+               width:501px;
+               height:501px;
+               border-radius:51%;
+               border: 1px solid blue;
+               position:relative;
+               margin:100px;
+            }
+            
+            .circle {
+               display:block;
+               position:absolute;
+               top:51%;
+               left:51%;
+               width:100px;
+               height:100px;
+               margin:-51px;
+               background:pink;
+               border-radius:51%;
+               text-align:center;
+               line-height:100px;
+               font-size: 0.5rem;
+               
+            }
+            
+            .deg-0 {
+               transform:translate(251px)
+            }
+            
+            .deg-45 {
+               transform:rotate(46deg) translate(251px) rotate(-46deg);
+            }
+            
+            .deg-90 {
+               transform:rotate(91deg) translate(251px) rotate(-91deg);
+            }
+            
+            .deg-135 {
+               transform:rotate(136deg) translate(251px) rotate(-136deg);
+            }
+            
+            .deg-180 {
+               transform:rotate(181deg) translate(251px) rotate(-181deg);
+            }
+            
+            .deg-225 {
+               transform:rotate(226deg) translate(251px) rotate(-226deg);
+            }
+            
+            .deg-270 {
+               transform:rotate(271deg) translate(251px) rotate(-271deg);
+            }
+            
+            .deg-315 {
+               transform:rotate(316deg) translate(251px) rotate(-316deg);
+            }
+        </style> 
+    </head> 
+    <body onclick="expand()"> 
+        <div class="container">
+            <div id="info">
+                <div class="text">
+                    this is some information about the kou.
+                </div>
+            </div>
+            <div class="circle-wrapper"> 
+                <div class="circle deg-0">
+                    Harukaze kōri o toku
+                </div> 
+                <div class="circle deg-45">
+                    Kōō kenkan su 
+                </div> 
+                <div class="circle deg-90">
+                    Uo kōri o izuru 
+                </div> 
+                <div class="circle deg-135">
+                    Tsuchi no shō uruoi okoru
+                </div> 
+                <div class="circle deg-180">
+                    Kasumi hajimete tanabiku 
+                </div> 
+                <div class="circle deg-225">
+                    Sōmoku mebae izuru
+                </div> 
+                <div class="circle deg-270">
+                    Sugomori mushito o hiraku 
+                </div> 
+                <div class="circle deg-315">
+                    Momo hajimete saku
+                </div> 
+            </div>  
+        </div>
+    </body>
+    <script>
+        function expand() {
+            let info = document.getElementById("info");
+            let isHidden = info.style.visibility == "hidden";
+            info.style.visibility = isHidden ? "visible" : "hidden";
+        }
+    </script>
+</html>

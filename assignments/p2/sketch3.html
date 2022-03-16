@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>p2 - sketch 03</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container {
+                display: flex;
+                flex-direction: row;
+                padding-top: 20vh;
+            }
+            .sekki {
+                position: relative;
+                width: 125px;
+                height: 125px;
+                margin-right: -8px;
+                border-radius: 1000px;
+                border: 1px solid blue;
+                display: flex;
+                flex-direction: row;
+                font-size: 0.5rem;
+            }
+            .stext {
+                position: absolute;
+                width: 100%;
+                margin-top: 5px;
+                text-align: center;
+            }
+            .kou {
+                width: 45px;
+                height: 45px;
+                margin-right: -5px;
+                margin-top: 38.25px;
+                border-radius: 1000px;
+                border: 1px solid blue;
+                text-align: center;
+            }
+            .text {
+                margin-top: 18px;
+            }
+        </style> 
+    </head> 
+    <body onclick="expand()"> 
+        <div class="container">
+            <div class="sekki">
+                <div class="stext">sekki 1</div>
+                <div class="kou"><div class="text">kou 1</div></div>
+                <div class="kou"><div class="text">kou 2</div></div>
+                <div class="kou"><div class="text">kou 3</div></div>
+            </div>
+            <div class="sekki">
+                <div class="stext">sekki 2</div>
+                <div class="kou"><div class="text">kou 4</div></div>
+                <div class="kou"><div class="text">kou 5</div></div>
+                <div class="kou"><div class="text">kou 6</div></div>
+            </div>
+            <div class="sekki">
+                <div class="stext">sekki 3</div>
+                <div class="kou"><div class="text">kou 7</div></div>
+                <div class="kou"><div class="text">kou 8</div></div>
+                <div class="kou"><div class="text">kou 9</div></div>
+            </div>
+            <div class="sekki">
+                <div class="stext">sekki 4</div>
+                <div class="kou"><div class="text">kou 10</div></div>
+                <div class="kou"><div class="text">kou 11</div></div>
+                <div class="kou"><div class="text">kou 12</div></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function expand() {
+            let info = document.getElementById("info");
+            let isHidden = info.style.visibility == "hidden";
+            info.style.visibility = isHidden ? "visible" : "hidden";
+        }
+    </script>
+</html>
