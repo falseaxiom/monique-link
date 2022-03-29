@@ -1,5 +1,12 @@
-// populate kou with labels
-// tag each with id as num
+// get event variables, create if they don't exist
+if (!localStorage.getItem("ec")) localStorage.setItem("ec", "{}");
+if (!localStorage.getItem("et")) localStorage.setItem("et", "{}");
+if (!localStorage.getItem("es")) localStorage.setItem("es", "{}");
+let ec = localStorage.getItem("ec");
+let et = localStorage.getItem("et");
+let es = localStorage.getItem("es");
+
+// populate kou
 var kous = document.getElementsByClassName("kou");
 for (let i = 0; i < kous.length; i++) {
     let kou = kous[i];
