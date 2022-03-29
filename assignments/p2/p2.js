@@ -7,7 +7,7 @@ for (let i = 0; i < kous.length; i++) {
     let num = i + 1;
     let sl = Math.floor(i / 3);
     let kl = (num) % 3;
-    let label = romaji[Object.keys(romaji)[sl]][kl];
+    let label = kanji[Object.keys(kanji)[sl]][kl];
 
     let k = document.createElement("div");
     k.classList.add("label");
