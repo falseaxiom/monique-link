@@ -50,3 +50,29 @@ var kanji = {
     "小寒":["芹乃栄", "水泉動", "雉始雊"],
     "大寒":["款冬華", "水沢腹堅", "鶏始乳"]
 }
+var english = {
+    "beginning of spring":["east wind melts the ice", "bush warblers start singing in the mountains", "fish emerge from the ice"],
+    "rainwater":["rain moistents the soil", "mist starts to linger", "grass sprouts, trees bud"],
+    "insects awaken":["hibernating insects surface", "first peach blossoms", "caterpillars become butterflies"],
+    "spring equinox":["sparrows start to nest", "first cherry blossoms", "distant thunder"],
+    "pure and clear":["swallows return", "wild geese fly north", "first rainbows"],
+    "grain rains":["first reeds sprout", "last frost, rice seedlings grow", "peonies bloom"],
+    "beginning of summer":["frogs start singing", "worms surface", "bamboo shoots sprout"],
+    "lesser ripening":["silkworms start feasting on mulberry leaves", "safflowers bloom", "wheat ripens and is harvested"],
+    "grain beards and seeds":["praying mantises hatch", "rotten grass becomes fireflies", "plums turn yellow"],
+    "summer solstice":["self-heal withers", "irises bloom", "crow-dipper sprouts"],
+    "lesser heat":["warm winds blow", "first lotus blossoms", "hawks learn to fly"],
+    "greater heat":["paulownia trees produce seeds", "earth is damp, air is humid", "great rains sometimes fall"],
+    "beginning of autumn":["cool winds blow", "evening cicadas sing", "thick fog descends"],
+    "manageable heat":["cotton flowers bloom", "heat starts to die down", "rice ripens"],
+    "white dew":["dew glistens white on grass", "wagtails sing", "swallows leave"],
+    "autumn equinox":["thunder ceases", "insects hole up underground", "farmers drain fields"],
+    "cold dew":["wild geese return", "chrysanthemums bloom", "crickets chirp around the door"],
+    "frost falls":["first frost", "light rains sometimes fall", "maple leaves and ivy turn yellow"],
+    "beginning of winter":["camellias bloom", "land starts to freeze", "daffodils bloom"],
+    "lesser snow":["rainbows hide", "north wind blows the leaves from the trees", "tachibana citrus tree leaves start to turn yellow"],
+    "greater snow":["cold sets in, winter begins", "beats start hibernating in their dens", "salmon gather and swim upstream"],
+    "winter solstice":["self-heal sprouts", "deer shed antlers", "wheat sprouts under snow"],
+    "lesser cold":["parsley flourishes", "springs thaw", "pheasants start to call"],
+    "greater cold":["butterburs bud", "ice thickens on streams", "hens start laying eggs"]
+}
