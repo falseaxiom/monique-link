@@ -1,3 +1,4 @@
+// change language of microseason labels - kanji default
 var kanji = {
     "立春":["東風解凍", "黄鶯睍睆", "魚上氷"],
     "雨水":["土脉潤起", "霞始靆", "草木萌動"],

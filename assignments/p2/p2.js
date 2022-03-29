@@ -4,21 +4,23 @@ var kous = document.getElementsByClassName("kou");
 for (let i = 0; i < kous.length; i++) {
     let kou = kous[i];
 
+    // get szn num and label
     let num = i + 1;
     let sl = Math.floor(i / 3);
     let kl = (num) % 3;
     let label = kanji[Object.keys(kanji)[sl]][kl];
 
+    // add num and label
     let k = document.createElement("div");
     k.classList.add("label");
     k.innerHTML = num + ". " + label;
-
     kou.appendChild(k);
 
+    // set id and grid-area as num
     kou.id = "k" + num;
     kou.style.gridArea = "d" + num;
 
-    // style based on event
+    // if event, add extra styling
     if (kou.firstChild != k) {
         kous[i].classList.add("eventful");
     }
