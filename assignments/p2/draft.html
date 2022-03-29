@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>p3 - draft</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --light: #dde4da;
+                --mid: #699c38;
+                --dark: #2d4715;
+                --highlight: rgb(105, 156, 56, 0.2);
+            }
+            .container {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: var(--mid);
+                color: var(--light);
+                /* text-align: right; */
+                font-family: 'Roboto Mono', monospace;
+            }
+            .container2 {
+                position: relative;
+                width: 100%;
+                height: 80%;
+                overflow-y: scroll;
+            }
+            .title {
+                position: fixed;
+                top: 10%;
+                left: 10%;
+                margin: 0;
+                height: 50px;
+                width: 80%;
+            }
+            h1 {
+                font-size: 1.5rem;
+                padding: 0;
+                margin: 0;
+            }
+            .month {
+                width: 500%;
+                height: 100%;
+                margin: 0 10%;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+            .calendar {
+                margin-top: 50px;
+                border-top: 1px solid var(--light);
+                width: 100%;
+                height: calc(100% - 51px);
+                display: grid;
+                grid-template-areas: 
+                    "d1 d4 d7 d10 d13 d16 d19 d22 d25 d28 d31 d34 d37 d40 d43 d46 d49 d52 d55 d58 d61 d64 d67 d70"
+                    "d2 d5 d8 d11 d14 d17 d20 d23 d26 d29 d32 d35 d38 d41 d44 d47 d50 d53 d56 d59 d62 d65 d68 d71"
+                    "d3 d6 d9 d12 d15 d18 d21 d24 d27 d30 d33 d36 d39 d42 d45 d48 d51 d54 d57 d60 d63 d66 d69 d72";
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 1px;
+                background: var(--light);
+            }
+            .kou {
+                position: relative;
+                padding: 5px 5px;
+                background: var(--mid);
+                transition: .5s;
+            }
+            .kou:hover {
+                opacity: 70%;
+            }
+            .label {
+                position: absolute;
+                width: calc(100% - 20px);
+                bottom: 5px;
+                left: 10px;
+                opacity: 100%;
+                transition: 0.5s;
+            }
+            .kou:hover > .label {
+                opacity: 0%;
+                /* display:none; */
+            }
+            .event {
+                /* color: var(--text); */
+                display: flex;
+                flex-direction: row;
+                opacity: 0%;
+                transition: .5s;
+                width: auto;
+                padding: 0 5px;
+            }
+            /* .event:hover {
+                transition: 0s;
+                background: var(--highlight);
+            } */
+            .kou:hover > .event {
+               opacity: 100%;
+               cursor: pointer;
+            }
+            .bullet {
+                margin-right: 1ch;
+            }
+            .eventful:hover {
+                opacity: 100%;
+                background: var(--dark);
+            }
+        </style>
+    </head> 
+    <body> 
+        <div class="container">
+            <div class="container2">
+                <div class="title">
+                    <h1>2022</h1>
+                </div> 
+                <div class="month">
+                    <div class="calendar">
+                        <div class="kou">
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet circle">○</span><span class="desc">something</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet triangle">△</span><span class="desc">something</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet square">□</span><span class="desc">something with a very very long description</span>
+                            </div>
+                        </div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou">
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet circle">○</span><span class="desc">event</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet circle">○</span><span class="desc">event</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet square">□</span><span class="desc">event</span>
+                            </div>
+                        </div>
+                        <div class="kou"></div>
+                        <div class="kou">
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet triangle">△</span><span class="desc">event</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet triangle">△</span><span class="desc">event</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet triangle">△</span><span class="desc">event</span>
+                            </div>
+                            <div class="event" onclick="check(this)">
+                                <span class="bullet triangle">△</span><span class="desc">event</span>
+                            </div>
+                        </div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        
+                        <div class="kou">
+                            <div class="event" onclick="check(this)">
+                                event
+                            </div>
+                        </div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                        <div class="kou"></div>
+                    </div>
+                </div>
+            </div>
+            <a style="position: absolute; bottom: 5px; right: 5px; text-decoration: none; color: var(--text)" href="../..">home</a>
+        </div>
+    </body>
+    <script>
+        var colors = ["red", "yellow", "green", "blue"]
+        var romaji = {
+            "risshun":  ["harukaze kōri o toku", "kōō kenkan su", "uo kōri o izuru"],
+            "usui":     ["tsuchi no shō uruoi okoru", "kasumi hajimete tanabiku", "sōmoku mebae izuru"],
+            "keichitsu":["sugomori mushito o hiraku", "momo hajimete saku", "namushi chō to naru"],
+            "shunbun":  ["suzume hajimete sukū", "sakura hajimete saku", "kaminari sunawachi koe o hassu"],
+            "seimei":   ["tsubame kitaru", "kōgan kaeru", "niji hajimete arawaru"],
+            "kokuu":    ["ashi hajimete shōzu", "shimo yamite nae izuru", "otan hana saku"],
+            "rikka":    ["kawazu hajimete naku", "mimizu izuru", "takenoko shōzu"],
+            "shōman":   ["kaiko okite kuwa o hamu", "benibana sakau", "mugi no toki itaru"],
+            "bōshu":    ["kamakiri shōzu", "kusaretaru kusa hotaru to naru", "ume no mi kibamu"],
+            "geshi":    ["natsukarekusa karuru", "ayame hana saku", "hange shōzu"],
+            "shōsho":   ["atsukaze itaru", "hasu hajimete hiraku", "taka sunawachi waza o narau"],
+            "taisho":   ["kiri hajimete hana o musubu", "tsuchi uruōte mushi atsushi", "taiu tokidoki furu"],
+            "risshū":   ["suzukaze itaru", "higurashi naku", "fukaki kiri matō"],
+            "shosho":   ["wata no hana shibe hiraku", "tenchi hajimete samushi", "kokumono sunawachi minoru"],
+            "hakuro":   ["kusa no tsuyu shiroshi", "sekirei naku", "tsubame saru"],
+            "shūbun":   ["kaminari sunawachi koe o osamu", "mushi kakurete to o fusagu", "mizu hajimete karuru"],
+            "kanro":    ["kōgan kitaru", "kiku no hana hiraku", "kirigirisu to ni ari"],
+            "sōkō":     ["shimo hajimete furu", "kosame tokidoki furu", "momiji tsuta kibamu"],
+            "rittō":    ["tsubaki hajimete hiraku", "chi hajimete kōru", "kinsenka saku"],
+            "shōsetsu": ["niji kakurete miezu", "kitakaze konoha o harau", "tachibana hajimete kibamu"],
+            "taisetsu": ["sora samuku fuyu to naru", "kuma ana ni komoru", "sake no uo muragaru"],
+            "tōji":     ["natsukarekusa shōzu", "sawashika no tsuno otsuru", "yuki watarite mugi nobiru"],
+            "shōkan":   ["seri sunawachi sakau", "shimizu atataka o fukumu", "khimizu atataka o fukumu"],
+            "daikan":   ["fuki no hana saku", "sawamizu kōri tsumeru", "niwatori hajimete toya ni tsuku"]
+        }
+
+        // Object.keys(sekki);
+
+        // populate kou with labels
+        // tag each with id as num
+        window.onload = function() {
+            var kous = document.getElementsByClassName("kou");
+            for (let i = 0; i < kous.length; i++) {
+                let kou = kous[i];
+
+                let num = i + 1;
+                let sl = Math.floor(i / 3);
+                let kl = (num) % 3;
+                let label = romaji[Object.keys(romaji)[sl]][kl];
+
+                let k = document.createElement("div");
+                k.classList.add("label");
+                k.innerHTML = num + ". " + label;
+
+                kou.appendChild(k);
+
+                kou.id = "k" + num;
+                kou.style.gridArea = "d" + num;
+
+                // style based on event
+                if (kou.firstChild != k) {
+                    kous[i].classList.add("eventful");
+                }
+            }
+        }
+
+        // check off events
+        function check(div) {
+            let bullet = div.firstChild.nextSibling;
+            let event = div.firstChild.nextSibling.nextSibling;
+            let checked = event.style.textDecoration == "line-through";
+            event.style.textDecoration = checked ? "none" : "line-through";
+            if      (bullet.classList.contains("circle"))   bullet.innerHTML = checked ? "○" : "●";
+            else if (bullet.classList.contains("triangle")) bullet.innerHTML = checked ? "△" : "▲";
+            else if (bullet.classList.contains("square"))   bullet.innerHTML = checked ? "□" : "■";
+        }
+    </script>
+</html>
