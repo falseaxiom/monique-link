@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>p3 - draft</title>
+        <title>p3 - 72 microseasons</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -60,6 +60,7 @@
                 opacity: 100%;
             }
             select {
+                -webkit-appearance: none;
                 border-radius: 0;
                 outline: 0;
                 border-width: 0 0 1px;
@@ -160,6 +161,12 @@
                 opacity: 100%;
                 background: var(--dark);
             }
+            a {
+                position: absolute;
+                bottom: 5px;
+                text-decoration: none;
+                color: var(--dark);
+            }
 
             /* @media only screen and (max-width: 900px) {
                 .container {
@@ -202,15 +209,15 @@
                             <option value="12">dec</option>
                         </select>
                         <select name="day">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
                             <option value="10">10</option>
                             <option value="11">11</option>
                             <option value="12">12</option>
@@ -234,7 +241,7 @@
                             <option value="30">30</option>
                             <option value="31">31</option>
                         </select>
-                        <button>↵</button>
+                        <button>+</button>
                     </form>
                 </div> 
                 <div class="month">
@@ -356,7 +363,8 @@
                     </div>
                 </div>
             </div>
-            <a style="position: absolute; bottom: 5px; right: 5px; text-decoration: none; color: var(--text)" href="../..">home</a>
+            <a style="left: 5px;">help</a>
+            <a style="right: 5px" href="../..">home</a>
         </div>
     </body>
     <script>
@@ -392,29 +400,27 @@
 
         // populate kou with labels
         // tag each with id as num
-        window.onload = function() {
-            var kous = document.getElementsByClassName("kou");
-            for (let i = 0; i < kous.length; i++) {
-                let kou = kous[i];
+        var kous = document.getElementsByClassName("kou");
+        for (let i = 0; i < kous.length; i++) {
+            let kou = kous[i];
 
-                let num = i + 1;
-                let sl = Math.floor(i / 3);
-                let kl = (num) % 3;
-                let label = romaji[Object.keys(romaji)[sl]][kl];
+            let num = i + 1;
+            let sl = Math.floor(i / 3);
+            let kl = (num) % 3;
+            let label = romaji[Object.keys(romaji)[sl]][kl];
 
-                let k = document.createElement("div");
-                k.classList.add("label");
-                k.innerHTML = num + ". " + label;
+            let k = document.createElement("div");
+            k.classList.add("label");
+            k.innerHTML = num + ". " + label;
 
-                kou.appendChild(k);
+            kou.appendChild(k);
 
-                kou.id = "k" + num;
-                kou.style.gridArea = "d" + num;
+            kou.id = "k" + num;
+            kou.style.gridArea = "d" + num;
 
-                // style based on event
-                if (kou.firstChild != k) {
-                    kous[i].classList.add("eventful");
-                }
+            // style based on event
+            if (kou.firstChild != k) {
+                kous[i].classList.add("eventful");
             }
         }
 
