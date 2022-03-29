@@ -12,7 +12,7 @@
                 --light: #dde4da;
                 --mid: #699c38;
                 --dark: #2d4715;
-                --highlight: rgb(105, 156, 56, 0.2);
+                --highlight: rgba(220, 227, 217, 0.5);
             }
             .container {
                 display: grid;
@@ -40,11 +40,57 @@
                 margin: 0;
                 height: 50px;
                 width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
             }
             h1 {
                 font-size: 1.5rem;
                 padding: 0;
                 margin: 0;
+            }
+            form {
+                min-width: 400px;
+                height: 1.6rem;
+                display: flex;
+                opacity: 0%;
+                transition: .5s;
+            }
+            form:hover {
+                opacity: 100%;
+            }
+            select {
+                outline: 0;
+                border-width: 0 0 1px;
+                border-color: var(--light);
+                margin-right: 10px;
+                background: inherit;
+                color: inherit;
+                font-family: inherit;
+            }
+            input {
+                flex: 1;
+                outline: 0;
+                border-width: 0 0 1px;
+                border-color: var(--light);
+                margin-right: 10px;
+                background: inherit;
+                color: inherit;
+                font-family: inherit;
+            }
+            input::placeholder {
+                color: var(--light);
+                opacity: 50%;
+            }
+            button {
+                border: 1px solid var(--light);
+                background: inherit;
+                color: inherit;
+                font-family: inherit;
+                transition: .5s;
+            }
+            button:hover {
+                background: var(--highlight);
             }
             .month {
                 width: 500%;
@@ -59,7 +105,7 @@
                 width: 100%;
                 height: calc(100% - 51px);
                 display: grid;
-                grid-template-areas: 
+                grid-template-areas:
                     "d1 d4 d7 d10 d13 d16 d19 d22 d25 d28 d31 d34 d37 d40 d43 d46 d49 d52 d55 d58 d61 d64 d67 d70"
                     "d2 d5 d8 d11 d14 d17 d20 d23 d26 d29 d32 d35 d38 d41 d44 d47 d50 d53 d56 d59 d62 d65 d68 d71"
                     "d3 d6 d9 d12 d15 d18 d21 d24 d27 d30 d33 d36 d39 d42 d45 d48 d51 d54 d57 d60 d63 d66 d69 d72";
@@ -133,6 +179,62 @@
             <div class="container2">
                 <div class="title">
                     <h1>2022</h1>
+                    <form onsubmit="validate()">
+                        <select name="bullettype">
+                            <option value="circle">○</option>
+                            <option value="triangle">△</option>
+                            <option value="square">□</option>
+                        </select>
+                        <input type="text" placeholder="new event...">
+                        <select name="month">
+                            <option value="1">jan</option>
+                            <option value="2">feb</option>
+                            <option value="3">mar</option>
+                            <option value="4">apr</option>
+                            <option value="5">may</option>
+                            <option value="6">jun</option>
+                            <option value="7">jul</option>
+                            <option value="8">aug</option>
+                            <option value="9">sep</option>
+                            <option value="10">oct</option>
+                            <option value="11">nov</option>
+                            <option value="12">dec</option>
+                        </select>
+                        <select name="day">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                        <button>↵</button>
+                    </form>
                 </div> 
                 <div class="month">
                     <div class="calendar">
