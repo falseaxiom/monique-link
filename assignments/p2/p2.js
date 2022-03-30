@@ -1,7 +1,7 @@
 /***** SETUP *****/
 
 // get event variables, create if they don't exist
-if (!localStorage.getItem("events")) localStorage.setItem('events', '{"02_04":"c&&circle&&f__t&&triangle&&f__s&&square&&f"}');
+if (!localStorage.getItem("events")) localStorage.setItem('events', '{"02_04":"c&&circle&&f"}');
 let events = JSON.parse(localStorage.getItem("events"));
 
 // label kou
@@ -167,4 +167,14 @@ function check(div) {
     evstr += ev[ev.length-1];
     events[evid[0]] = evstr;
     localStorage.setItem("events", JSON.stringify(events));
+}
+
+// turn on/off help screen
+let help = document.getElementById("help");
+let form = document.getElementById("form");
+let k1 = document.getElementById("k1");
+function getHelp() {
+    let hidden = help.className == "hidden";
+    help.className = hidden ? "" : "hidden";
+    hidden ? form.classList.add("helpy") : form.classList.remove("helpy");
 }

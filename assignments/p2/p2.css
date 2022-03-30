@@ -1,9 +1,10 @@
-/* GENERAL (colors, links, containers) */
+/* GENERAL (colors, links, containers, hiding) */
 :root {
     --light: #dde4da;
     --mid: #699c38;
     --dark: #2d4715;
     --highlight: rgba(220, 227, 217, 0.5);
+    --lowlight: rgba(45, 71, 21, 0.5);
 }
 h1 {
     font-size: 1.5rem;
@@ -35,6 +36,10 @@ a {
     height: 80%;
     overflow-y: scroll;
 }
+.hidden {
+    opacity: 0%;
+    display: none !important;
+}
 
 /* HEADER (title, event form) */
 .title {
@@ -49,7 +54,7 @@ a {
     justify-content: space-between;
 }
 .form {
-    min-width: 400px;
+    width: 400px;
     height: 1.6rem;
     display: flex;
     opacity: 0%;
@@ -160,6 +165,35 @@ button:hover {
 }
 .eventful:hover {
     opacity: 100%;
+    background: var(--dark);
+}
+
+#helpbutt:hover {
+    cursor: pointer;
+}
+#help {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: var(--lowlight);
+    transition: .5s;
+    opacity: 100%;
+}
+.helpy {
+    opacity: 100%;
+}
+.helper {
+    position: absolute;
+    border: 1px solid var(--light);
+    padding: 10px;
+    white-space: nowrap;
+}
+.helpdesc {
+    margin-top: -2.5rem;
+    margin-left: -11px;
     background: var(--dark);
 }
 

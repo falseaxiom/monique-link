@@ -11,13 +11,10 @@
     </head> 
     <body> 
         <div class="container">
-            <!-- <div class="help">
-
-            </div> -->
             <div class="container2">
                 <div class="title">
                     <h1>72 microseasons</h1>
-                    <div class="form">
+                    <div class="form" id="form">
                         <select id="fbullettype" name="bullettype">
                             <option value="c">○</option>
                             <option value="t">△</option>
@@ -155,7 +152,16 @@
                     </div>
                 </div>
             </div>
-            <a style="left: 5px;">help</a>
+            <div class="hidden" id="help" onclick="getHelp()">
+                <div class="helper" id="helpnewevent" style="top: calc(10% - 10px); right: calc(10% - 10px); width: 400px; height: 1.6rem;">
+                    <div class="helpdesc" style="width: 31ch;">hover here to make a new event.</div>
+                </div>
+                <div class="helper" id="helpkou" style="top: calc(10% + 41px); left: calc(10% - 10px); width: 20.8883%; height: calc(26.6667% - 17px);">
+                    <div class="helpdesc" style="width: 40ch;">hover over a square to view your events.</div>
+                </div>
+                <div class="helper" id="helpevent"></div>
+            </div>
+            <a id="helpbutt" style="left: 5px;" onclick="getHelp()">help</a>
             <a style="right: 5px" href="../..">home</a>
         </div>
     </body>
