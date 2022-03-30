@@ -10,10 +10,11 @@ h1 {
     font-size: 1.5rem;
     padding: 0;
     margin: 0;
+    transition: 0.5s;
 }
 a {
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     text-decoration: none;
     color: var(--dark);
 }
@@ -38,7 +39,10 @@ a {
 }
 .hidden {
     opacity: 0%;
-    display: none !important;
+    display: none;
+}
+.hidden2 {
+    opacity: 0%;
 }
 
 /* HEADER (title, event form) */
@@ -182,7 +186,7 @@ button:hover {
     transition: .5s;
     opacity: 100%;
 }
-.helpy {
+.helpyform {
     opacity: 100%;
 }
 .helper {
@@ -194,7 +198,16 @@ button:hover {
 .helpdesc {
     margin-top: -2.5rem;
     margin-left: -11px;
+}
+.helpykou {
+    opacity: 100%;
     background: var(--dark);
+}
+.helpykou > .label {
+    opacity: 0%;
+}
+.helpykou > .event {
+    opacity: 100%;
 }
 
 /* RESPONSIVE */

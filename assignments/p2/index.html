@@ -13,7 +13,7 @@
         <div class="container">
             <div class="container2">
                 <div class="title">
-                    <h1>72 microseasons</h1>
+                    <h1 id="stm">72 microseasons</h1>
                     <div class="form" id="form">
                         <select id="fbullettype" name="bullettype">
                             <option value="c">○</option>
@@ -159,10 +159,17 @@
                 <div class="helper" id="helpkou" style="top: calc(10% + 41px); left: calc(10% - 10px); width: 20.8883%; height: calc(26.6667% - 17px);">
                     <div class="helpdesc" style="width: 40ch;">hover over a square to view your events.</div>
                 </div>
-                <div class="helper" id="helpevent"></div>
+                <div id="helpevent" style="position: absolute; top: calc(10% + 61px + 0.5ch); left: calc(10% + 10px + 9ch); width: 20%; height: 1px; background: var(--light);"></div>
+                <div id="helpevent2" style="position: absolute; top: calc(10% + 55px); left: calc(30% + 15px + 9ch);">
+                    click to cross off,<br>
+                    right-click to delete
+                </div>
+                <div class="helper" id="helphelp" style="bottom: 0; left: 0; width: 4ch; height: 1em;">
+                    <div class="helpdesc" style="width: 45ch;">click here to view this screen again anytime.</div>
+                </div>
             </div>
-            <a id="helpbutt" style="left: 5px;" onclick="getHelp()">help</a>
-            <a style="right: 5px" href="../..">home</a>
+            <a id="helpbutt" style="left: 10px;" onclick="getHelp()">help</a>
+            <a style="right: 10px" href="../..">home</a>
         </div>
     </body>
     <script src="seasons.js"></script>

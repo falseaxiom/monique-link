@@ -1,7 +1,7 @@
 /***** SETUP *****/
 
 // get event variables, create if they don't exist
-if (!localStorage.getItem("events")) localStorage.setItem('events', '{"02_04":"c&&circle&&f"}');
+if (!localStorage.getItem("events")) localStorage.setItem('events', '{"02_04":"c&&circle&&f__t&&triangle&&f__s&&square&&f"}');
 let events = JSON.parse(localStorage.getItem("events"));
 
 // label kou
@@ -30,6 +30,9 @@ for (let i = 0; i < kous.length; i++) {
 let eKeys = Object.keys(events);
 for (let i = 0; i < eKeys.length; i++) {
     let key = eKeys[i];
+
+    if (events[key] == "") continue;
+
     let date = key.split("_");
     let month = date[0];
     let day = date[1];
@@ -79,6 +82,7 @@ function makeEvent(k, evid, info) {
     ev.classList.add("event");
     ev.id = evid;
     ev.onclick = function() {check(this)};
+    ev.oncontextmenu = function() {deleteEvent(this); return false;}
 
     let done = info[2] == "t"
 
@@ -112,9 +116,14 @@ function makeEvent(k, evid, info) {
 // add event to list & calendar
 function addEvent() {
     let type = document.getElementById("fbullettype").value;
-    let event = document.getElementById("fevent").value;
+    let event = document.getElementById("fevent").value.trim();
     let month = document.getElementById("fmonth").value;
     let day = document.getElementById("fday").value;
+
+    if (event == "") {
+        alert("event must not be blank!");
+        return;
+    }
 
     let k = convert(month, day);
 
@@ -139,8 +148,35 @@ function addEvent() {
 }
 
 // delete event from list & calendar
-function deleteEvent() {
+function deleteEvent(div) {
+    // alert("you are deleting me :(");
 
+    // remove from list
+    events = JSON.parse(localStorage.getItem("events"));
+    let evida = div.id.split("?")
+    let type = div.firstChild.classList;
+    let event = div.firstChild.nextSibling;
+    let checked = (event.style.textDecoration == "line-through") ? "t" : "f";
+    let today = events[evida[0]].split("__");
+    for (let i = 0; i < today.length; i++) {
+        let evs = today[i].split("&&");
+        if (!type.contains(evs[0]) ||  event.innerHTML != evs[1] || checked != evs[2]) continue;
+        today.splice(i, 1);
+        break;
+    }
+
+    // update localStorage
+    let evstr = "";
+    for (let i = 0; i < today.length; i++) {
+        evstr += today[i] + "__";
+    }
+    if (today.length > 0) evstr = evstr.substring(0, evstr.length - 2);
+    events[evida[0]] = evstr;
+    if (evstr == "") delete events[evida[0]];
+    localStorage.setItem("events", JSON.stringify(events));
+
+    // remove from calendar
+    div.remove();
 }
 
 // check off events
@@ -156,25 +192,33 @@ function check(div) {
     else if (bullet.classList.contains("s")) { bullet.innerHTML = checked ? "□" : "■"; type = "s"; }
 
     // make sure to update localStorage!
-    let evid = div.id.split("?");
+    let evida = div.id.split("?");
     events = JSON.parse(localStorage.getItem("events"));
-    let ev = events[evid[0]].split("__");
-    ev[evid[1]] = type + "&&" + event.innerHTML + "&&" + (checked ? "f" : "t");
+    let evs = events[evida[0]].split("__");
     let evstr = "";
-    for (let i = 0; i < ev.length - 1; i++) {
-        evstr += ev[i] + "__";
+    for (let i = 0; i < evs.length; i++) {
+        let ev = evs[i].split("&&");
+        if (bullet.classList.contains(ev[0]) &&  event.innerHTML == ev[1] && checked == (ev[2] == "t")) {
+            evstr += type + "&&" + event.innerHTML + "&&" + (checked ? "f" : "t") + "__";
+            continue;
+        }
+        evstr += evs[i] + "__";
     }
-    evstr += ev[ev.length-1];
-    events[evid[0]] = evstr;
+    evstr = evstr.substring(0, evstr.length - 2);
+    events[evida[0]] = evstr;
     localStorage.setItem("events", JSON.stringify(events));
 }
 
 // turn on/off help screen
 let help = document.getElementById("help");
+let stm = document.getElementById("stm");
 let form = document.getElementById("form");
 let k1 = document.getElementById("k1");
 function getHelp() {
+    window.scrollTo(0, 0);
     let hidden = help.className == "hidden";
     help.className = hidden ? "" : "hidden";
-    hidden ? form.classList.add("helpy") : form.classList.remove("helpy");
+    stm.className = hidden ? "hidden2" : "";
+    hidden ? form.classList.add("helpyform") : form.classList.remove("helpyform");
+    hidden ? k1.classList.add("helpykou") : k1.classList.remove("helpykou");
 }
