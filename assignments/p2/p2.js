@@ -12,7 +12,7 @@ for (let i = 0; i < kous.length; i++) {
     // get szn num and label
     let num = i + 1;
     let sl = Math.floor(i / 3);
-    let kl = (num) % 3;
+    let kl = i % 3;
     let label = kanji[Object.keys(kanji)[sl]][kl];
 
     // add num and label
@@ -50,21 +50,26 @@ for (let i = 0; i < eKeys.length; i++) {
 
 // convert date to kou
 function convert(month, day) {
-    let start = "02_04";
+    let y1 = 2022;
+    let y2 = 2023;
+    let m = parseInt(month);
+    let d = parseInt(day);
 
-    // let ckeys = Object.keys(conversions);
+    if (m == 2 && d == 29) return 5; // special case: leap year
 
-    // for (let i = 0; i < ckeys.length; i++) {
-    //     let sekki = conversions(ckeys);
-    //     for (let j = 0; j < sekki.length; j++) {
-    //         let bounds = ckeys[sekki][j].split("^");
-    //         let ll = bounds[0].split("_");
-    //         let ul = bounds[1].split("_");
-    //         if ()
-    //     }
-    // }
+    let start = new Date (y1, 2, 4);
+    let now;
+    if (m < 2 || (m == 2 && d < 4)) now = new Date(y2, m, d);
+    else                            now = new Date(y1, m, d);
 
-    return 1;
+    let between = now.getTime() - start.getTime();
+    between /= (1000 * 3600 * 24);
+
+    let diff = 0;
+    for (let i = 0; i < szndays.length; i++) {
+        diff += szndays[i];
+        if (diff > between) {return i+1;}
+    }
 }
 
 // make event div
@@ -116,7 +121,6 @@ function addEvent() {
     events = JSON.parse(localStorage.getItem("events"));
     let key = month + "_" + day;
     if (!events[key]) events[key] = "";
-    console.log(key);
     let j = events[key].split("__").length;
     let evid = key+"?"+j;
 
