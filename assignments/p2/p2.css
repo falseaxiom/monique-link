@@ -48,7 +48,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
 }
-form {
+.form {
     min-width: 400px;
     height: 1.6rem;
     display: flex;

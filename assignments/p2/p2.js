@@ -90,9 +90,39 @@ function makeEvent(k, evid, info) {
     }
 }
 
-// add event to list
+// add event to list & calendar
 function addEvent() {
-    
+    let type = document.getElementById("fbullettype").value;
+    let event = document.getElementById("fevent").value;
+    let month = document.getElementById("fmonth").value;
+    let day = document.getElementById("fday").value;
+
+    let k = convert(month, day);
+
+    events = JSON.parse(localStorage.getItem("events"));
+    let key = month + "_" + day;
+    if (!events[key]) events[key] = "";
+    console.log(key);
+    let j = events[key].split("__").length;
+    let evid = key+"?"+j;
+
+    let info = [type, event, "f"];
+
+    // add to calendar
+    makeEvent(k, evid, info);
+
+    // update localStorage
+    let evida = evid.split("?");
+    if (events[evida[0]] == "") events[evida[0]] = type + "&&" + event + "&&f";
+    else                       events[evida[0]] += "__" + type + "&&" + event + "&&f";
+    localStorage.setItem("events", JSON.stringify(events));
+
+    document.getElementById("fevent").value = "";
+}
+
+// delete event from list & calendar
+function deleteEvent() {
+
 }
 
 // check off events
