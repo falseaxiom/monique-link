@@ -50,6 +50,20 @@ for (let i = 0; i < eKeys.length; i++) {
 
 // convert date to kou
 function convert(month, day) {
+    let start = "02_04";
+
+    // let ckeys = Object.keys(conversions);
+
+    // for (let i = 0; i < ckeys.length; i++) {
+    //     let sekki = conversions(ckeys);
+    //     for (let j = 0; j < sekki.length; j++) {
+    //         let bounds = ckeys[sekki][j].split("^");
+    //         let ll = bounds[0].split("_");
+    //         let ul = bounds[1].split("_");
+    //         if ()
+    //     }
+    // }
+
     return 1;
 }
 
