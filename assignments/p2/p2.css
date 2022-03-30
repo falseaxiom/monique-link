@@ -83,6 +83,7 @@ input {
     outline: 0;
     border-width: 0 0 1px;
     border-color: var(--light);
+    border-radius: 0;
     margin-right: 10px;
     background: inherit;
     color: inherit;
