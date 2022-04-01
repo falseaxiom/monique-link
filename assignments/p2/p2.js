@@ -15,8 +15,17 @@ for (let i = 0; i < kous.length; i++) {
     // add num and label
     let k = document.createElement("div");
     k.classList.add("label");
-    (num < 10) ? k.innerHTML = "0" : "";
-    k.innerHTML += num + ". " + label;
+
+    let n = document.createElement("span");
+    let l = document.createElement("span");
+    n.id = 'num';
+    l.id = 'lab';
+    n.innerHTML = (num < 10) ? "0" + num + "." : num + ".";
+    l.innerHTML = label;
+    n.style.marginRight = '1ch';
+    k.appendChild(n);
+    k.appendChild(l);
+
     kou.appendChild(k);
 
     // set id and grid-area as num
@@ -51,12 +60,11 @@ for (let i = 0; i < eKeys.length; i++) {
 let today = new Date();
 let d = String(today.getDate()).padStart(2, '0');
 let m = String(today.getMonth() + 1).padStart(2, '0');
-today = m + "/" + d;
-console.log(today);
 today = convert(m, d);
-console.log(today);
 let tod = document.getElementById("k" + today);
-console.log(tod)
+let dot = document.createElement("div");
+dot.className = "today";
+tod.appendChild(dot);
 
 /***** FUNCTIONS *****/
 
