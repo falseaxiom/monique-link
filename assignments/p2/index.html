@@ -8,6 +8,19 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="p2.css">
+        <script>
+            /***** SETUP p1 *****/
+            // get event variables, create if they don't exist
+            if (!localStorage.getItem("events")) localStorage.setItem('events', '{"02_04":"c&&circle&&f__t&&triangle&&f__s&&square&&f"}');
+            if (!localStorage.getItem("theme")) localStorage.setItem('theme', 'green');
+            let events = JSON.parse(localStorage.getItem("events"));
+            let theme = localStorage.getItem("theme");
+            let themes = ['green', 'yellow', 'blue', 'pink'];
+            let thicons = {'green':'◓', 'yellow':'◑', 'blue':'◒', 'pink':'◐'}
+
+            // set theme (avoid flashing green this way!)
+            document.documentElement.className = theme;
+        </script>
     </head> 
     <body> 
         <div class="container">
@@ -168,7 +181,8 @@
                     <div class="helpdesc" style="width: 45ch;">click here to view this screen again anytime.</div>
                 </div>
             </div>
-            <a id="helpbutt" style="left: 10px;" onclick="getHelp()">help</a>
+            <a style="left: 10px;" onclick="getHelp()">help</a>
+            <a id="thicon" style="left: calc(50% - 0.5ch);" onclick="changeTheme(this)"></a>
             <a style="right: 10px" href="../..">home</a>
         </div>
     </body>

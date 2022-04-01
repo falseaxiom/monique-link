@@ -1,10 +1,32 @@
 /* GENERAL (colors, links, containers, hiding) */
-:root {
+:root,
+:root.green {
     --light: #dde4da;
     --mid: #699c38;
     --dark: #2d4715;
-    --highlight: rgba(220, 227, 217, 0.5);
-    --lowlight: rgba(45, 71, 21, 0.5);
+    --highlight: #dde4da80;
+    --lowlight: #2d471580;
+}
+:root.yellow {
+    --light: #e4e2da;
+    --mid: #a78128;
+    --dark: #472d15;
+    --highlight: #e4e2da80;
+    --lowlight: #47371580;
+}
+:root.blue {
+    --light: #dadbe4;
+    --mid: #3669bb;
+    --dark: #151647;
+    --highlight: #dadbe480;
+    --lowlight: #15164780;
+}
+:root.pink {
+    --light: #e4dadf;
+    --mid: #b1588c;
+    --dark: #471526;
+    --highlight: #e4dadf80;
+    --lowlight: #47152680;
 }
 h1 {
     font-size: 1.5rem;
@@ -17,6 +39,10 @@ a {
     bottom: 10px;
     text-decoration: none;
     color: var(--dark);
+    transition: 0.5s;
+}
+a:hover {
+    cursor: pointer;
 }
 .container {
     display: grid;
@@ -30,6 +56,7 @@ a {
     color: var(--light);
     /* text-align: right; */
     font-family: 'Roboto Mono', monospace;
+    transition: 0.5s;
 }
 .container2 {
     position: relative;
@@ -173,9 +200,6 @@ button:hover {
     background: var(--dark);
 }
 
-#helpbutt:hover {
-    cursor: pointer;
-}
 #help {
     position: absolute;
     top: 0;

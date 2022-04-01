@@ -1,8 +1,5 @@
-/***** SETUP *****/
-
-// get event variables, create if they don't exist
-if (!localStorage.getItem("events")) localStorage.setItem('events', '{"02_04":"c&&circle&&f__t&&triangle&&f__s&&square&&f"}');
-let events = JSON.parse(localStorage.getItem("events"));
+/***** SETUP p2 *****/
+document.getElementById('thicon').innerHTML = thicons[theme];
 
 // label kou
 var kous = document.getElementsByClassName("kou");
@@ -18,7 +15,8 @@ for (let i = 0; i < kous.length; i++) {
     // add num and label
     let k = document.createElement("div");
     k.classList.add("label");
-    k.innerHTML = num + ". " + label;
+    (num < 10) ? k.innerHTML = "0" : "";
+    k.innerHTML += num + ". " + label;
     kou.appendChild(k);
 
     // set id and grid-area as num
@@ -49,7 +47,31 @@ for (let i = 0; i < eKeys.length; i++) {
     }
 }
 
+// mark current season!
+let today = new Date();
+let d = String(today.getDate()).padStart(2, '0');
+let m = String(today.getMonth() + 1).padStart(2, '0');
+today = m + "/" + d;
+console.log(today);
+today = convert(m, d);
+console.log(today);
+let tod = document.getElementById("k" + today);
+console.log(tod)
+
 /***** FUNCTIONS *****/
+
+// change theme
+function changeTheme(div) {
+    for (let i = 0; i < themes.length; i++) {
+        if (theme != themes[i]) continue;
+        
+        theme = themes[(i+1) % themes.length];
+        document.documentElement.className = theme;
+        div.innerHTML = thicons[theme];
+        localStorage.setItem("theme", theme);
+        break;
+    }
+}
 
 // convert date to kou
 function convert(month, day) {
