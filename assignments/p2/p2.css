@@ -248,15 +248,41 @@ button:hover {
 }
 
 /* RESPONSIVE */
-/* @media only screen and (max-width: 900px) {
-    .container {
-        overflow-x: hidden;
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 1rem;
     }
     .container2 {
         height: 70%;
         margin-bottom: 25%;
     }
-    .month {
-        width: 1200%;
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100px;
+        position: fixed;
+        top: 5%;
+        left: 10%;
+        margin-top: -5px;
     }
-} */
+    .form {
+        width: 100%;
+        opacity: 100%;
+        margin-top: 10px;
+    }
+    .year {
+        width: 5760vw;
+        overflow-y: hidden;
+    }
+    .calendar {
+        display: flex;
+        flex-direction: row;
+        margin-top: 100px;
+        height: calc(100% - 101px);
+    }
+    .kou {
+        width: calc(80vw - 10px);
+        height: calc(100% - 10px);
+    }
+}

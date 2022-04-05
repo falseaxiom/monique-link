@@ -1,6 +1,17 @@
 /***** SETUP p2 *****/
 document.getElementById('thicon').innerHTML = thicons[theme];
 
+// help screen variable stuff
+let help = document.getElementById("help");
+let stm = document.getElementById("stm");
+let form = document.getElementById("form");
+
+// what is today?
+let today = new Date();
+let d = String(today.getDate()).padStart(2, '0');
+let m = String(today.getMonth() + 1).padStart(2, '0');
+today = convert(m, d);
+
 // label kou
 var kous = document.getElementsByClassName("kou");
 for (let i = 0; i < kous.length; i++) {
@@ -28,10 +39,24 @@ for (let i = 0; i < kous.length; i++) {
 
     kou.appendChild(k);
 
+    // mark today, change date
+    if (num == today) {
+        let dot = document.createElement("div");
+        dot.className = "today";
+        kou.appendChild(dot);
+
+        // change title to reflect current season
+        stm.innerHTML = "today, " + english[Object.keys(english)[sl]][kl];
+    }
+
     // set id and grid-area as num
     kou.id = "k" + num;
     kou.style.gridArea = "d" + num;
+    
 }
+
+// scroll to today
+// document.getElementById("k"+today).scrollIntoView({ behavior: 'smooth', block: 'start'});
 
 // populate with events
 let eKeys = Object.keys(events);
@@ -56,15 +81,6 @@ for (let i = 0; i < eKeys.length; i++) {
     }
 }
 
-// mark current season!
-let today = new Date();
-let d = String(today.getDate()).padStart(2, '0');
-let m = String(today.getMonth() + 1).padStart(2, '0');
-today = convert(m, d);
-let tod = document.getElementById("k" + today);
-let dot = document.createElement("div");
-dot.className = "today";
-tod.appendChild(dot);
 
 /***** FUNCTIONS *****/
 
@@ -240,12 +256,8 @@ function check(div) {
 }
 
 // turn on/off help screen
-let help = document.getElementById("help");
-let stm = document.getElementById("stm");
-let form = document.getElementById("form");
 let k1 = document.getElementById("k1");
 function getHelp() {
-    window.scrollTo(0, 0);
     let hidden = help.className == "hidden";
     help.className = hidden ? "" : "hidden";
     stm.className = hidden ? "hidden2" : "";
