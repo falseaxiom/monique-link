@@ -88,7 +88,7 @@ a:hover {
     width: 400px;
     height: 1.6rem;
     display: flex;
-    opacity: 0%;
+    opacity: 100%;
     transition: .5s;
 }
 .form:hover {
@@ -163,7 +163,19 @@ button:hover {
     transition: .5s;
 }
 .kou:hover {
-    opacity: 70%;
+    opacity: 80%;
+}
+.dates {
+    position: absolute;
+    width: calc(100% - 20px);
+    bottom: 5px;
+    left: 10px;
+    text-align: right;
+    opacity: 0%;
+    transition: 0.5s;
+}
+.kou:hover > .dates {
+    opacity: 100%;
 }
 .label {
     position: absolute;
@@ -209,6 +221,19 @@ button:hover {
     height: 10px;
     border-radius: 5px;
     background: var(--light);
+}
+
+/* EVENTLESS QUOTE LAYOUT */
+.quote {
+    width: calc(100% - 20px);
+    padding: 20% 10px 0 10px;
+    text-align: center;
+    font-style: italic;
+    opacity: 0%;
+    transition: .5s;
+}
+.kou:hover > .quote {
+    opacity: 100%;
 }
 
 /* HELP LAYOUT */

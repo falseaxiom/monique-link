@@ -15,8 +15,18 @@
             if (!localStorage.getItem("theme")) localStorage.setItem('theme', 'green');
             let events = JSON.parse(localStorage.getItem("events"));
             let theme = localStorage.getItem("theme");
+
+            // arrays for stuff
             let themes = ['green', 'yellow', 'blue', 'pink'];
             let thicons = {'green':'◓', 'yellow':'◑', 'blue':'◒', 'pink':'◐'}
+            let activities = [
+                'feed the birds', 'pick flowers', 'write poetry', 'stargaze',
+                'watch the clouds', 'feel the rain on your skin', 'take a long walk', 'lay in the grass', 
+                'draw what you see', 'meditate', 'eat good food', 'cook a hearty meal',
+                'journal', 'take a nap', 'collect some cool-looking rocks', 'drink plenty of water',
+                'read a book', 'climb a tree', 'take a bike ride', 'go for a hike',
+                'feel the wind in your hair'
+            ]
 
             // set theme (avoid flashing green this way!)
             document.documentElement.className = theme;
@@ -167,7 +177,7 @@
             </div>
             <div class="hidden" id="help" onclick="getHelp()">
                 <div class="helper" id="helpnewevent" style="top: calc(10% - 10px); right: calc(10% - 10px); width: 400px; height: 1.6rem;">
-                    <div class="helpdesc" style="width: 31ch;">hover here to make a new event.</div>
+                    <div class="helpdesc" style="width: 31ch;">click here to make a new event.</div>
                 </div>
                 <div class="helper" id="helpkou" style="top: calc(10% + 41px); left: calc(10% - 10px); width: 20.8883%; height: calc(26.6667% - 17px);">
                     <div class="helpdesc" style="width: 40ch;">hover over a square to view your events.</div>

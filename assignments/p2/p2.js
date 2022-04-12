@@ -21,7 +21,8 @@ for (let i = 0; i < kous.length; i++) {
     let num = i + 1;
     let sl = Math.floor(i / 3);
     let kl = i % 3;
-    let label = kanji[Object.keys(kanji)[sl]][kl];
+    let label = english[Object.keys(english)[sl]][kl];
+    let dates = conversions[Object.keys(conversions)[sl]][kl];
 
     // add num and label
     let k = document.createElement("div");
@@ -29,15 +30,21 @@ for (let i = 0; i < kous.length; i++) {
 
     let n = document.createElement("span");
     let l = document.createElement("span");
-    n.id = 'num';
-    l.id = 'lab';
+    n.className = 'num';
+    l.className = 'lab';
     n.innerHTML = (num < 10) ? "0" + num + "." : num + ".";
     l.innerHTML = label;
     n.style.marginRight = '1ch';
-    k.appendChild(n);
+    // k.appendChild(n);
     k.appendChild(l);
 
     kou.appendChild(k);
+
+    // show date conversions on hover
+    let da = document.createElement("div");
+    da.className = 'dates';
+    da.innerHTML = dates;
+    kou.appendChild(da);
 
     // mark today, change date
     if (num == today) {
@@ -46,7 +53,7 @@ for (let i = 0; i < kous.length; i++) {
         kou.appendChild(dot);
 
         // change title to reflect current season
-        stm.innerHTML = "today, " + english[Object.keys(english)[sl]][kl];
+        stm.innerHTML = m + "." + d + " | today, " + english[Object.keys(english)[sl]][kl];
     }
 
     // set id and grid-area as num
@@ -56,7 +63,7 @@ for (let i = 0; i < kous.length; i++) {
 }
 
 // scroll to today
-// document.getElementById("k"+today).scrollIntoView({ behavior: 'smooth', block: 'start'});
+if (screen.width <= 1000) document.getElementById("k"+today).scrollIntoView({ behavior: 'smooth', block: 'start'});
 
 // populate with events
 let eKeys = Object.keys(events);
@@ -80,6 +87,19 @@ for (let i = 0; i < eKeys.length; i++) {
         makeEvent(k, evid, info);
     }
 }
+
+// populate eventless seasons with quotes
+for (let i = 0; i < kous.length; i++) {
+    let k = kous[i];
+
+    if (!k.classList.contains("eventful")) {
+        let quote = document.createElement("div");
+        quote.className = "quote";
+        quote.innerHTML = "no events this season... spend some time in nature and " + activities[i % activities.length] + ".";
+        k.appendChild(quote);
+    }
+}
+
 
 
 /***** FUNCTIONS *****/
@@ -258,6 +278,7 @@ function check(div) {
 // turn on/off help screen
 let k1 = document.getElementById("k1");
 function getHelp() {
+    if (screen.width <= 1000) return;
     let hidden = help.className == "hidden";
     help.className = hidden ? "" : "hidden";
     stm.className = hidden ? "hidden2" : "";
