@@ -271,6 +271,9 @@ button:hover {
 .helpykou > .event {
     opacity: 100%;
 }
+.helpykou > .dates {
+    opacity: 100%;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1000px) {
