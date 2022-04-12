@@ -95,6 +95,7 @@ for (let i = 0; i < kous.length; i++) {
     if (!k.classList.contains("eventful")) {
         let quote = document.createElement("div");
         quote.className = "quote";
+        quote.id = "q"+(i+1);
         quote.innerHTML = "no events this season... spend some time in nature and " + activities[i % activities.length] + ".";
         k.appendChild(quote);
     }
@@ -175,6 +176,9 @@ function makeEvent(k, evid, info) {
 
     // color kou if needed
     if (!kou.classList.contains("eventful")) {
+        let elem = document.getElementById("q"+k);
+        if (elem) elem.remove();
+
         kou.classList.add("eventful");
     }
 }
@@ -206,7 +210,7 @@ function addEvent() {
 
     // update localStorage
     let evida = evid.split("?");
-    if (events[evida[0]] == "") events[evida[0]] = type + "&&" + event + "&&f";
+    if (events[evida[0]] == "") {events[evida[0]] = type + "&&" + event + "&&f";}
     else                       events[evida[0]] += "__" + type + "&&" + event + "&&f";
     localStorage.setItem("events", JSON.stringify(events));
 
