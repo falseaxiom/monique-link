@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>interview</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background: black;
+                color: white;
+                font-size: 1.5rem;
+                line-height: 1.5em;
+                margin: none;
+                padding: none;
+                width: calc(100vw - 16px);
+                height: 100vh;
+                place-items: center;
+                overflow: hidden;
+            }
+            a {
+                text-decoration: none;
+                font-weight: 700;
+                color: #4169e1;
+            }
+            .container {
+                width: 60%;
+                height: 100%;
+                padding: 0 20%;
+                overflow: hidden;
+                display: block;
+            }
+            .question {
+                width: 100%;
+                height: 90%;
+                padding: 5% 0;
+                display: flex;
+                flex-direction: column;
+                overflow-y: scroll;
+            }
+            .focus {
+                animation: fade .5s;
+            }
+            .question div {
+                padding-bottom: 1.5em;
+            }
+            .me {
+                font-style: italic;
+                color: grey;
+            }
+            .home {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+            }
+            .imgContainer {
+                width: 100%;
+                height: 300px;
+                padding-bottom: 1.5em;
+                display: grid;
+                place-items: center;
+            }
+            img {
+                max-height: 100%;
+            }
+
+            /* adapted from min guhong's fruitful presentation */
+            /* @-webkit-keyframes fade {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+            @keyframes fade {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="question focus" id="0">
+                <a class="imgContainer" href="https://noodledesk.tumblr.com" target="_blank">
+                    <img src="https://64.media.tumblr.com/d0626be67b0414ff29238f9e57135855/edc2c2a93ecc7277-e6/s128x128u_c1/2b3c3121f3e58e9d37d0236a3ffc8ff48bd36dcf.pnj">
+                </a>
+                <div>interview with <a href="https://noodledesk.tumblr.com/" target="_blank">jessica le</a>: student, artist, poet, blogger, youtuber, gamedev</div>
+                <a href="#1">start!</a>
+            </div>
+            <div class="question" id="1">
+                <div class="me">
+                    Tell me a bit about yourself--you as a college student, artist, poetry enjoyer
+                    (and 
+                    <a href="https://youtu.be/zZdru4h1LK0" target="_blank">Naruto enjoyer</a>?),
+                    and person-on-the-Internet.
+                </div>
+                <div class="jess">
+                    I'm a 22-year old business student in Canada! At the moment I'm particularly
+                    interested in tech ethics, human-centered design, and how tech intersects with
+                    our reading, writing, and neighbourhoods. I periodically get obsessed with a different
+                    medium for storytelling every few months — music, game dev, film, painting, dance,
+                    and most recently, poetry, which is interesting, because I think that interest has
+                    stabilized a little. I've been into it for about two years now!
+                </div>
+                <div class="jess">
+                    And hahaha I would love to talk about Naruto! Or maybe manga in general. And growing
+                    up on the internet. I think these things affected my storytelling and project work a
+                    LOT. I love manga and comics. I think visual storytelling is SO interesting. They come
+                    together so beautifully and I love how selective artists have to be with what angles,
+                    frames, etc. I still read a ton of manga every year because they inspire me a lot. As
+                    an influence, I feel like it makes its way into my work because I'm always thinking about
+                    how stuff looks, what angles are doing for the mood, etc. Kind of hard to articulate,
+                    but yeah! And for the internet, language moves so fast and rules get broken all the time,
+                    so that inspires me to throw things around in my poetry. And to be silly, to tell jokes
+                    with serious writing.
+                </div>
+                <a href="#0">wait, who am i talking to again?</a>
+                <a href="#2">on inspiration...</a>
+            </div>
+            <div class="question" id="2">
+                <div class="me">
+                    What, or who, would you say are your biggest inspirations, now and in the past?
+                </div>
+                <div class="jess">
+                    In a messy, incomplete little list: Ocean Vuong, Anne Carson, Ross Gay, Nintendo DS
+                    games, PSP games, conversations with friends, Phoebe Waller-Bridge, sci-fi movies and
+                    books, my family, The 1975, Wild Rivers, Hozier, Alicia Keys, Outkast, Yotsuba&!, Krista
+                    Tippett, Roald Dahl...those are a couple :)
+                </div>
+                <a href="#1">go back</a>
+                <a href="#3">on Tumblr as a platform...</a>
+            </div>
+            <div class="question" id="3">
+                <div class="me">
+                    As a fellow 
+                    <a href="https://noodledesk.tumblr.com/" target="_blank">Tumblr user</a>,
+                    what is your opinion on the platform? How does it compare to
+                    using other social media? What makes it fun? Frustrating? Exciting?
+                </div>
+                <div class="jess">
+                    I basically grew up on the platform and spent like, all my
+                    teenage years on it. I would say it's the platform I spend the most time on by far —
+                    I've started to really distance myself from Instagram, Facebook, things with algorithm-based
+                    feeds instead of the chronological feed that Tumblr still has.  It's fun because it's
+                    anonymous and it has character — the tag system for conversations is like muttering to
+                    yourself in your house but people can hear it, reblogs are funny, stuff doesn't work a lot,
+                    and there's an overall culture on the website that I think is totally missing from other
+                    platforms. Also, I just really like long-form text. I think a lot of large social media
+                    networks don't have that capability. It's frustrating, though, because it doesn't work as
+                    intuitively as these other platforms. As for exciting, I'd say their willingness to experiment
+                    with different forms of monetization is promising. I hope to be able to continue using the
+                    platform without worrying about ads and the data tracking that TikTok, Instagram, Facebook,
+                    etc. have become famous for.
+                </div>
+                <a href="#2">go back</a>
+                <a href="#4">on comics and drawing...</a>
+            </div>
+            <div class="question" id="4">
+                <div class="me">
+                    You post a lot of really fun comics to your blog, with subjects ranging from
+                    productivity/self care advice to everyday life experiences. How did you come up with the
+                    little bunny persona you use for them? And what prompts you to make your comics--like, how
+                    do you decide what's important (or perhaps urgent?) enough to draw out and send into the world?
+                </div>
+                <a class="imgContainer" href="https://noodledesk.tumblr.com/post/673547163328036864/we-just-vibing" target="blank">
+                    <img src="https://64.media.tumblr.com/63d3c6b5389e33972cd192b5cd3e3618/f7d400f6686cd7f4-22/s500x750/27a3f411e548abaa71affe4df40fe4892c1abc39.jpg">
+                </a>
+                <div class="jess">
+                    I think I was just doodling one day and thought that the bunny was really easy to draw, and
+                    neutral enough that I could express myself through it. I sometimes feel embarrassed about
+                    writing things down in my journal even though no one will see it, but when I can talk through
+                    this kind of dumb-looking rabbit I feel less bad about it. For comics, I don't know! I actually
+                    think I don't put much thought into them or urgency. They're more like, what is on my mind in
+                    this current moment that I feel like I'm not quite able to talk about in a nuanced way or with
+                    only words? I'll make a comic about it so I can at least try to draw it out.
+                </div>
+                <a href="#3">go back</a>
+                <a href="#5">on playlists...</a>
+            </div>
+            <div class="question" id="5">
+                <div class="me">
+                    I really love your specific playlists! One of my favorites is 
+                    <a
+                        href="https://t.umblr.com/redirect?z=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F6js8J35i8eYcRHGObABUNw%3Fsi%3Dea880a33c3b04e87&t=ZDYzNzIxYTNmNTZiNjRjNDdiMGUyNzJjM2U4NTY4ZDViNjBmYjA3MixKanNYY1FHdg%3D%3D&b=t%3A2OZNkOyFYgSTOR_UwFy2zA&p=https%3A%2F%2Fnoodledesk.tumblr.com%2Fpost%2F679256524555698176%2Fplaylists-for-very-specific-vibes&m=0&ts=1650385925"
+                        target="_blank">
+                        "closing credits"</a>; 
+                    some songs really do have that end-of-movie vibe to them (and if I could humbly suggest a song to add, it
+                    would be Allie X's "Learning in Public"!). To get into link-making, curating playlists does
+                    require a sort of intuition for what songs fit and flow into one another (one might say they feel
+                    <span style="text-decoration: none">linked</span> together...!), and I think you're quite good at
+                    it. Could you speak to that experience a bit?
+                </div>
+                <iframe style="border-radius:12px; padding-bottom: 1.5em;" src="https://open.spotify.com/embed/playlist/6js8J35i8eYcRHGObABUNw?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <div class="jess">
+                    Thank you!! It makes me so excited that you like the playlists, and I have absolutely added your
+                    song rec into closing credits. For my playlists I usually have a narrative in mind for them, and
+                    so I think about whether or not specific songs fit into that narrative mostly by visualizing like,
+                    a scene from that narrative, and whether or not the song suits that narrative. I always think about
+                    what the playlist looks like, if that makes sense. i.e., if this were a scene in a movie, how would
+                    I soundtrack it? I also think having a bit of a background in music helps me to understand genres
+                    and general vibes, which makes sorting a little easier!
+                </div>
+                <a href="#4">go back</a>
+                <a href="#6">on Notion...</a>
+            </div>
+            <div class="question" id="6">
+                <div class="me">
+                    I've noticed you're an avid advocate of 
+                    <a href="https://www.notion.so" target="_blank">Notion</a>; some of your posts detail how to get the best use
+                    out of the platform, and I've used one of your templates in the past when I was first getting the
+                    hang of it. How does it compare to using more popular productivity apps like Google Calendar? I've
+                    personally always liked how malleable it is, and how disconnected it feels from the rest of the Internet.
+                </div>
+                <div class="jess">
+                    I love looking at apps. Something I like to do in my free time is just browse the Google Play Store,
+                    which I have since learned from a friend is a strange thing to do. But I just love looking at what tools
+                    and games people are making. I think it's so fun! So I've definitely tried my fair share of applications
+                    and tools. That same friend is the one who introduced me to Notion — it took me a long time to get over
+                    the learning curve, but I just really liked how I was able to shape things based on whatever my needs were,
+                    because they were always changing, which meant I could never stick to a program for long. So I really like
+                    it! I also think they do a lot of things well with design, which made me excited to continue using it.
+                </div>
+                <a href="#5">go back</a>
+                <a href="#7">on Twine...</a>
+            </div>
+            <div class="question" id="7">
+                <div class="me">
+                    Beyond running an entertaining and helpful Tumblr blog, you're also a game developer on 
+                    <a href="https://windbreak.itch.io" target="_blank">Itch.io</a>, with a
+                    particular fondness for using 
+                    <a href="https://twinery.org" target="_blank">Twine</a>.
+                    How did you get into using the software? What are its benefits and
+                    drawbacks? Do you think your projects could only exist in Twine, or would you try another framework in the future?
+                </div>
+                <div class="jess">
+                    I love Twine! I was always really obsessed with choose-your-own-adventure games and books when I was younger,
+                    so I think it was a natural exploration of that interest. I loved being able to make little choices when I
+                    played DS games. I always thought it was close to magic, but now that I'm a little older I think just that
+                    feeling of actively participating in art is the exciting part. In that way it's not that much different from
+                    looking at a painting or reading a book, but the participation part is explicit. Which is cool.
+                </div>
+                <div class="jess">
+                    For Twine in particular, I think it's very accessible because it's free! And anyone can make text-based
+                    adventures. You don't need to know how to develop much. I'd say it's also constrained by the text medium,
+                    because a lot of beautiful games are based on visual mechanics. But I also don't think that's a bad thing.
+                    Most books and poems are constrained by being words only and they still have a huge capacity to move people.
+                </div>
+                <div class="jess">
+                    I would love to try new platforms! I love visual art and music. I'd love to be able to do something with that,
+                    but at the moment I don't think I have the skills to do that, which is why Twine has been a great way for me
+                    to explore games without being really, really time intensive.
+                </div>
+                <a href="#6">go back</a>
+                <a href="#8">on CYOA games (and poetry??!!)...</a>
+            </div>
+            <div class="question" id="8">
+                <div class="me">
+                    Twine makes great use of links--and you use this to your advantage by making choose-your-own-adventure games.
+                    What is the writing process like for these kinds of narratives? And, especially, how do you write your CYOA poetry?
+                </div>
+                <div class="jess">
+                    It's pretty on the spot! At most, I'll have an idea of what the point of a scene is, or a concept I'd
+                    like toflesh out (i.e.
+                    <a href="https://windbreak.itch.io/the-now-weve-named" target="_blank">'the now we've named'</a>
+                    came from me wanting to imagine what making coffee would
+                    be like in a text-based game), and I have a super messy OneNote where I just write down all my ideas
+                    and sort them afterward, kind of like sticky notes. But a lot of the writing is free writing, and then
+                    I'll go back and edit things so that stuff makes sense. The thing about writing games is that stuff
+                    has to make sense most of the time, which makes it fun but also tedious, sometimes. I think in circles
+                    a lot. Testing out if links work forces me to reread a lot, so it's nice that the bug-fixing process
+                    lines up with the writing / editing process.
+                </div>
+                <div class="jess">
+                    My CYOA poetry is really freeform, but I usually always have a narrative in mind so I can start to
+                    think about what directions stuff can go in, when it circles around, when stuff changes permanently.
+                    A lot of it is playing, which is fun. It's like, not committing, exactly — when I write a more traditional
+                    poem, I have to ask myself, where is this going? Did I get there? But with CYOA poetry, I can go one way,
+                    and then come back and say, never mind. What if I went this way instead? And all those possibilities can
+                    coexist. I write pretty much everything in OneNote, though, so I can move things around and look at how
+                    they visually link together.
+                </div>
+                <a href="#7">go back</a>
+                <a href="#9">on worldbuilding and voice...</a>
+            </div>
+            <div class="question" id="9">
+                <div class="me">
+                    Your writing is so lovely; it's sensory, it's witty, the dialogue feels so natural (!!!), and everything
+                    is extremely imaginative. I'm always tempted to say your poetry is my favorite, but I think it's actually
+                    <a href="https://windbreak.itch.io/the-now-weve-named" target="_blank">"the now we've named"</a>, 
+                    which I've probably played like ten times by now. How do you come up with these
+                    worlds? Do the people come first, or the environment, or the feeling? How do you get into the voices
+                    for each of them? Do you have a favorite character, or maybe one that was the most fun to write?
+                </div>
+                <a class="imgContainer" href="https://windbreak.itch.io/the-now-weve-named" target="blank">
+                    <img src="https://img.itch.zone/aW1nLzQwMzM4OTMuanBn/315x250%23c/SB1h7P.jpg">
+                </a>
+                <div class="jess">
+                    Thank you! What a lovely thing to read. And I'm so happy you liked "the now we've named"! That one was
+                    really fun to make. It was a spinoff of this funny space opera thing I wrote in high school about an
+                    AI in space, which is the first thing I made on itch.io. For these, I got the idea for the world first,
+                    then the people. It kept coming back to the environment, though, because I was thinking a lot about how
+                    these people might be different from us if they grew up in like, space. But I get the most excited about
+                    writing the characters because they're still people and they still behave like people. Also I love to
+                    write their dialogue.
+                </div>
+                <div clas="jess">
+                    For their different voices, I think writing poetry helps me think about the kind of 'vibe' I'm trying
+                    to construct when a character is saying something. How does their voice sound? What are their vibes?
+                    I think about how they would sound in a digital chatroom a lot, for example, because in chatrooms the
+                    only thing you really have are words. There's no gestures or expressions so a lot more has to be
+                    expressible through text. I think about that a lot for these Twine dialogues because there's no image
+                    the player can rely on, and I tend to put stretches of dialogue without other description because I
+                    think it's really fun.
+                </div>
+                <div class="jess">
+                    I think the most fun character to write was probably 
+                    <span style="font-family: 'Courier New', Courier, monospace; color: orange">Yves</span>,
+                    the AI! I liked thinking about a machine being smug and a little silly.
+                </div>
+                <a href="#8">go back</a>
+                <a href="#10">on favorite projects...</a>
+            </div>
+            <div class="question" id="10">
+                <div class="me">
+                    Do you have a favorite project of yours that you'd like to talk more about? Or anything you're excited
+                    to write in the future?
+                </div>
+                <div class="jess">
+                    I'm not sure I have a favourite project — I tend to forget about them pretty quickly once I finish
+                    them because in my head I'm like, that's done. Closure! And by then I usually start getting excited
+                    about some new project. But maybe if I had to pinpoint one I'd say I had a lot of fun making my Twine
+                    projects. I love to write a little bit of humour in stuff. I think that humour still makes its way
+                    into my poetry and other writing, but with games I feel a lot of freedom in being silly and making fun.
+                </div>
+                <a href="#9">go back</a>
+                <a href="#11">on Are.na...</a>
+            </div>
+            <div class="question" id="11">
+                <div class="me">
+                    Sorry to bring it back to social media, but have you ever tried
+                    <a href="https://www.are.na" target="_blank">Are.na</a>? If so, how does it compare to
+                    Tumblr? We had to use it for this class and I feel like they're really similar, but I'd love to hear
+                    your perspective on it.
+                </div>
+                <div class="jess">
+                    I've actually never tried Are.na, but I think I've seen it around here and there! Looking a little
+                    closer at the concept, though, it kind of reminds me of
+                    <a href="https://obsidian.md" target="_blank">Obsidian</a>, which I recently started using
+                    and am personally obsessed with. It's free and stored entirely locally on your computer, and runs
+                    on these links you put between pages. It's like a Twine game for my life!!
+                </div>
+                <a href="#10">go back</a>
+                <a href="#12">on poetry compilations...</a>
+            </div>
+            <div class="question" id="12">
+                <div class="me">
+                    How do you feel about poetry/media compilations on Tumblr? And do you have a favorite one you'd like to share?
+                </div>
+                <div class="jess">
+                    I'm kind of torn about them! On one hand I love them because I love looking at the connection between
+                    these beautiful works that people have found. It's like critical reading in bite sized pieces. And I
+                    love how they're often multidisciplinary - paintings & writing & people's text posts & a screencap of
+                    a movie. On the other hand I think sometimes they take out the most beautiful part of the experience
+                    of reading which is like, you need a lot of context in order to appreciate and experience what is being
+                    said. So these fragments make it hard to do that. But I really do like them. A favourite: maybe
+                    <a href="https://noodledesk.tumblr.com/post/646015338216144896" target="_blank">this one about friendship</a>!
+                </div>
+                <a href="#11">go back</a>
+                <a href="#13">final thoughts?</a>
+            </div>
+            <div class="question" id="13">
+                <div class="me">
+                    Finally, do you have any wisdom you'd like to impart on my classmates? Any projects to promote? Friends'
+                    blogs to shout out? Or just something interesting/funny you've heard recently?
+                </div>
+                    <a class="imgContainer" href="http://www.anstrutherpress.com/#/the-nearest-sweetest-thing-by-jessica-le/" target="_blank">
+                        <img src="https://images.squarespace-cdn.com/content/v1/54372588e4b0dbae7c8d02fa/1631582492230-IX19MH2Y13QSDTCR9P8C/Nearest+Thing+.jpg?format=1500w">
+                    </a>
+                <div class="jess">
+                    Thank you for these lovely questions! I really appreciated going back and thinking about stuff I've worked on.
+                </div>
+                <div class="jess">
+                    I don't think I have much wisdom to impart at the moment … but I did recently publish my first poetry
+                    chapbook a few months ago with Anstruther Press! You can check it out on
+                    <a href="http://www.anstrutherpress.com/#/the-nearest-sweetest-thing-by-jessica-le/" target="_blank">Anstruther Press</a>'
+                    website — they have published some beautiful lovely poets. 
+                </div>
+                <a href="#12">go back</a>
+                <a href="#0">to the beginning.</a>
+            </div>
+        </div>
+        <a class="home" href="../">home</a>
+    </body>
+    <script>
+    </script>
+</html>
