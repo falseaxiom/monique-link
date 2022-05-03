@@ -72,7 +72,7 @@ var english = {
     "frost falls":              ["first frost", "light rains sometimes fall", "maple leaves and ivy turn yellow"],
     "beginning of winter":      ["camellias bloom", "land starts to freeze", "daffodils bloom"],
     "lesser snow":              ["rainbows hide", "north wind blows the leaves from the trees", "tachibana citrus tree leaves start to turn yellow"],
-    "greater snow":             ["cold sets in, winter begins", "beats start hibernating in their dens", "salmon gather and swim upstream"],
+    "greater snow":             ["cold sets in, winter begins", "bears start hibernating in their dens", "salmon gather and swim upstream"],
     "winter solstice":          ["self - heal sprouts", "deer shed antlers", "wheat sprouts under snow"],
     "lesser cold":              ["parsley flourishes", "springs thaw", "pheasants start to call"],
     "greater cold":             ["butterburs bud", "ice thickens on streams", "hens start laying eggs"]
