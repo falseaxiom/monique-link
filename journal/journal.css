@@ -1,0 +1,33 @@
+:root {
+    --red: #ff5e36;
+    --yellow: #fdae10;
+    --green: #7abb03;
+    --blue: #5cb0ff;
+    --brown: #331501;
+    --tan: #fff9e6;
+}
+body {
+    display: grid;
+    place-items: center;
+    font-family: 'Roboto Mono', monospace;
+    background: var(--tan);
+    color: var(--brown);
+}
+a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    cursor: pointer;
+    color: var(--tan);
+    background: var(--brown);
+}
+
+.container {
+    width: 70vw;
+    height: auto;
+    padding: 5vw 5vh;
+}

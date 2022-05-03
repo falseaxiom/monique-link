@@ -36,9 +36,9 @@ h1 {
 }
 a {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     text-decoration: none;
-    color: var(--dark);
+    color: var(--light);
     transition: 0.5s;
 }
 a:hover {
