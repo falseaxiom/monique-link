@@ -106,10 +106,31 @@ var conversions = {
 }
 
 var szndays = [
-    5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-    5, 5, 5, 5, 5, 5, 5, 5, 6, 5, 5, 6,
-    5, 5, 5, 6, 5, 5, 5, 5, 6, 6, 5, 5,
-    5, 5, 5, 5, 5, 6, 5, 5, 5, 5, 5, 5,
-    5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-    5, 5, 5, 5, 5, 4, 5, 5, 5, 5, 5, 5
+    5, 5, 5, // beginning of spring
+    5, 5, 5, // rainwater
+    5, 5, 5, // insects awaken
+    5, 5, 5, // spring equinox
+    5, 5, 5, // pure and clear
+    5, 5, 5, // grain rains
+    5, 5, 6, // beginning of summer
+    5, 5, 6, // lesser ripening
+    5, 5, 5, // grain beards and seeds
+    6, 5, 5, // summer solstice
+    5, 5, 6, // lesser heat
+    6, 5, 5, // greater heat
+    5, 5, 5, // beginning of autumn
+    5, 5, 6, // manageable heat
+    5, 5, 5, // white dew
+    5, 5, 5, // autumn equinox
+    5, 5, 5, // cold dew
+    5, 5, 5, // frost falls
+    5, 5, 5, // beginning of winter
+    5, 5, 5, // lesser snow
+    5, 5, 5, // greater snow
+    5, 5, 4, // winter solstice
+    5, 5, 5, // lesser cold
+    5, 5, 5  // greater cold
 ]
+
+// refer to this site for seasons:
+// https://www.nippon.com/en/features/h00124/

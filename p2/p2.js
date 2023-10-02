@@ -127,9 +127,9 @@ function convert(month, day) {
 
     if (m == 2 && d == 29) return 5; // special case: leap year
 
-    let start = new Date (y1, 2, 4);
+    let start = new Date (y1, 2, 4); // 72 microseasons begin on feb 4
     let now;
-    if (m < 2 || (m == 2 && d < 4)) now = new Date(y2, m, d);
+    if (m < 2 || (m == 2 && d < 4)) now = new Date(y2, m, d); // loop around if before feb 4
     else                            now = new Date(y1, m, d);
 
     let between = now.getTime() - start.getTime();
@@ -138,7 +138,7 @@ function convert(month, day) {
     let diff = 0;
     for (let i = 0; i < szndays.length; i++) {
         diff += szndays[i];
-        if (diff > between) {return i+1;}
+        if (diff > between) {return i;}
     }
 }
 
